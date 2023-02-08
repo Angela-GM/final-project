@@ -3,17 +3,45 @@
     <h3 :class="props.task.is_complete ? 'clase1' : 'clase2'">
       {{ task.title }}
     </h3>
-    <p>{{  task.description }}</p>
-    <button @click="deleteTask">Delete {{ task.title }}</button>
-    <button @click="completeTask">completada {{ task.title }}</button>
+    <p>{{ task.description }}</p>
+    <!-- Boton de eliminar tarea -->
+    <!-- <button @click="deleteTask">Delete {{ task.title }}</button> -->
+    <button @click="changeShowModal">Delete {{ task.title }}</button>
 
+
+
+
+    <!-- Boton de completar tarea -->
+    <button @click="completeTask">completada {{ task.title }}</button>
+    <!-- Boton de editar tarea -->
     <button @click="showInput">Edit {{ task.title }}</button>
     <div v-if="inputContainer">
       <input type="text" v-model="currentTaskTitle" />
       <input type="text" v-model="currentTaskDescription" />
       <button @click="editTask">Update task</button>
-    </div>    
+    </div>
   </div>
+  <!-- Ventana Modal al eliminar una tarea -->
+  <!-- Overlay -->
+  <transition name="fade">
+    <div class="modal-overlay" v-if="showModal">      
+    </div>
+  </transition>
+
+  <transition name="fade">
+    <div class="modal-container" v-if="showModal">      
+        <h1>Are you sure you want to delete:</h1>
+      <p>{{ task.title }}</p>
+      <button @click="deleteTask">Eliminar</button>
+      <button @click="changeShowModal">Cerrar</button>   
+    </div>
+  </transition>
+
+
+
+
+
+
 </template>
 
 <script setup>
@@ -72,16 +100,31 @@ const editTask = () => {
 const deleteTask = async () => {
   await taskStore.deleteTask(props.task.id);
 };
+
+// Ventana Modal
+// variable booleana para mostrar o ocultar el modal
+let showModal = ref(false);
+const changeShowModal = () => {
+  showModal.value =! showModal.value
+
+};
 </script>
 
 <style>
-.clase1 {
-  text-decoration: line-through;
-}
+/* si pongo este style en style.css no funciona */
+.modal-container {  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   /* Para centrar del todo la ventana modal */
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2em;
+    border-radius: 15px;
+    z-index: 2;
+  };
 
-.clase2 {
-  text-decoration: none;
-}
+
 </style>
 
 <!--

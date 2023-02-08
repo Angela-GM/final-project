@@ -1,4 +1,4 @@
-/* :root {
+:root {
     --colorWhite: #ffffff;
     --colorBlack: #000000;
     --colorRed: red;
@@ -6,16 +6,47 @@
     --fontFamily: 'Arial, Helvetica, sans-serif';
     --fontTitle: 'Arial';
     --fontBody: 'Helvetica';
-} */
+}
 
 /* SignIn Component */
 
-/* h1 {
+h1 {
     color: var(--colorRed);
-} */
+}
 
 /* SignUp Component */
+
+
+/* TaskItem */
+/* Estilo para tachar una tarea editada */
+.clase1 {
+    text-decoration: line-through;
+  }
+  
+  .clase2 {
+    text-decoration: none;
+  }
+  
+  /* modal para eliminar tarea */
+  /* Overlay de la pantalla al abrir el modal */
+  .modal-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.4);    
+  };
+
+
+
+  
+
+
 
 /* Home view */
 
 /* Account View */
+
+
