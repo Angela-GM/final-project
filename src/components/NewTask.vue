@@ -47,6 +47,9 @@ if(name.value.length === 0 || description.value.length === 0){
     taskStore.addTask(name.value, description.value);
     name.value = '';
     description.value = '';
+
+    
+
 }
 };
 

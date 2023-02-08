@@ -21,7 +21,7 @@
           <p>Welcome, user</p>
         </li>
         <li>
-          <button @click="signOut" class="button">Log out</button>
+          <button @click.prevent="signOut" class="button">Log out</button>
         </li>
       </ul>
     </div>
@@ -50,10 +50,16 @@ const userEmail = getUser.email;
 const redirect = useRouter();
 
 const signOut = async () => {
+  console.log("ha entrado en la funcion signOut");
   try{
     // call the user store and send the users info to backend to signOut
+    await useUserStore().signOut();
     // then redirect user to the homeView
-  } catch (error) {}
+    redirect.push({ path: "/auth/login" });
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
 };
 
 </script>

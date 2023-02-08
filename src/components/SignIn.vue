@@ -68,9 +68,6 @@ const redirect = useRouter();
 
 // Arrow function to Signin user to supaBase
 const signIn = async () => {
-  // console.log(email.value);
-  // console.log(password.value);
-
   if (email.value){
     try {
       await useUserStore().signIn(email.value, password.value);

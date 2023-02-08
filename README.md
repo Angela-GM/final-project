@@ -117,15 +117,20 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 - [x] Crear HTML del formulario SigIn
 - [x] Conectar el proyecto a Supabase, crear tabala "profiles"
 - [x] Crear lógica para poder acceder a través del formulario SignIn
-- [ ] Ej - Crear section "projects" en html
 
 #### Day Two
 
 ###### Martes 24, Enero 2023
 
+- [x] Crear lógica para el botón LogOut
+- [x] Se ha creado la lógica para que funcione el CRUD de las tareas
+- [ ] Crear modal para para confirmar la eliminación de una tarea
+
 #### Day Three
 
 ###### Miercoles 25, Enero 2023
+
+- [ ] Crear perfil
 
 #### Day Four
 
