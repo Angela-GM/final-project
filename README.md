@@ -110,14 +110,14 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 #### Day One
 
-#### Day One
-
 ###### Lunes 23, Enero 2023
 
-- [ ] Tarea no completada
-- [x] Tarea Completada
+- [x] Conocer el projecto
+- [x] Crear archivo Readme
+- [x] Crear HTML del formulario SigIn
+- [x] Conectar el proyecto a Supabase, crear tabala "profiles"
+- [x] Crear lógica para poder acceder a través del formulario SignIn
 - [ ] Ej - Crear section "projects" en html
-- [x] Ej - Crear section "projects" en html
 
 #### Day Two
 
