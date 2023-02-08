@@ -110,7 +110,7 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 #### Day One
 
-###### Lunes 23, Enero 2023
+###### Martes 7, Febrero 2023
 
 - [x] Conocer el projecto
 - [x] Crear archivo Readme
@@ -120,25 +120,30 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 #### Day Two
 
-###### Martes 24, Enero 2023
+###### Miercoles 8, Febrero 2023
 
 - [x] Crear lógica para el botón LogOut
 - [x] Se ha creado la lógica para que funcione el CRUD de las tareas
-- [ ] Crear modal para para confirmar la eliminación de una tarea
+- [x] Crear modal para confirmar la eliminación de una tarea
 
 #### Day Three
 
-###### Miercoles 25, Enero 2023
+###### Jueves 9, Febrero 2023
 
-- [ ] Crear perfil
+- [ ] Crear página de perfil
+- [ ] Crear lógica para editar el perfil
+- [ ] Conectar a Vercel
+- [ ] Empezar con el CSS
 
 #### Day Four
 
-###### Jueves 26, Enero 2023
+###### Viernes 10, Febrero 2023
+
+- [ ] Continuar con el CSS
 
 #### Day Five
 
-###### Viernes 27, Enero 2023
+###### Lunes 13, Febrero 2023
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
