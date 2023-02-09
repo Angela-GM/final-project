@@ -7,7 +7,9 @@
   --fontTitle: "Arial";
   --fontBody: "Helvetica";
 }
-
+body {
+  background-color: blue;
+}
 /* SignIn Component */
 
 h1 {
