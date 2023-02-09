@@ -14,13 +14,9 @@
 
 
 
-
-
-
-
-
   <img :src="avatar_url ? avatar_url : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'" alt="Profile picture">
   
+  <router-link to="/edit">Edit Profile</router-link>
 
 
 
@@ -53,6 +49,7 @@
     await userStore.fetchUser();
     username.value = userStore.profile.username;
     avatar_url.value = userStore.profile.avatar_url;
+    website.value = userStore.profile.website;
   }
 
   async function signOut() {

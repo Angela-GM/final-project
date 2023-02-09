@@ -115,7 +115,7 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 - [x] Conocer el projecto
 - [x] Crear archivo Readme
 - [x] Crear HTML del formulario SigIn
-- [x] Conectar el proyecto a Supabase, crear tabala "profiles"
+- [x] Conectar el proyecto a Supabase, crear tabla "profiles"
 - [x] Crear lógica para poder acceder a través del formulario SignIn
 
 #### Day Two

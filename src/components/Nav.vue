@@ -18,7 +18,7 @@
     <div>
       <ul>
         <li class="log-out-welcome">
-          <p>Welcome, user</p>
+          <p>Welcome, {{ userEmail }}</p>
         </li>
         <li>
           <button @click.prevent="signOut" class="button">Log out</button>

@@ -1,52 +1,56 @@
 :root {
-    --colorWhite: #ffffff;
-    --colorBlack: #000000;
-    --colorRed: red;
-    --fontSize-sm: 16px;
-    --fontFamily: 'Arial, Helvetica, sans-serif';
-    --fontTitle: 'Arial';
-    --fontBody: 'Helvetica';
+  --colorWhite: #ffffff;
+  --colorBlack: #000000;
+  --colorRed: red;
+  --fontSize-sm: 16px;
+  --fontFamily: "Arial, Helvetica, sans-serif";
+  --fontTitle: "Arial";
+  --fontBody: "Helvetica";
 }
 
 /* SignIn Component */
 
 h1 {
-    color: var(--colorRed);
+  color: var(--colorRed);
 }
 
 /* SignUp Component */
 
-
 /* TaskItem */
 /* Estilo para tachar una tarea editada */
 .clase1 {
-    text-decoration: line-through;
-  }
-  
-  .clase2 {
-    text-decoration: none;
-  }
-  
-  /* modal para eliminar tarea */
-  /* Overlay de la pantalla al abrir el modal */
-  .modal-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.4);    
-  };
+  text-decoration: line-through;
+}
 
+.clase2 {
+  text-decoration: none;
+}
 
+/* modal para eliminar tarea */
+/* Overlay de la pantalla al abrir el modal */
 
-  
-
-
+.modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Para centrar del todo la ventana modal */
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 2em;
+  border-radius: 15px;
+  z-index: 2;
+}
+/* estilos para la vental modal */
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+}
 
 /* Home view */
 
 /* Account View */
-
-

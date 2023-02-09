@@ -6,7 +6,7 @@
     <p class="header-subtitle">Estamos en la ruta de login. Aquí deberíais crear un form con la lógica correspondiente para que este permita al usuario loguearse con su email y su contraseña. Miraros la lógica de SignUp si necesitáis inspiración :)</p>
     <p>Dont have an account? <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/></p> -->
 
-<!-- Logo de la web -->
+    <!-- Logo de la web -->
     <figure>Logo</figure>
     <h1>Welcome to TaskTime</h1>
     <h3>Here starts your day.</h3>
@@ -37,15 +37,20 @@
             required
           />
         </div>
-        
+
         <button class="button" type="submit">Sign In</button>
-        
       </div>
     </form>
 
-    <p>Dont have an account? <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/></p>
-
-    </div>
+    <p>
+      Dont have an account?
+      <PersonalRouter
+        :route="route"
+        :buttonText="buttonText"
+        class="sign-up-link"
+      />
+    </p>
+  </div>
 </template>
 
 <script setup>
@@ -65,22 +70,28 @@ const email = ref("");
 const password = ref("");
 const redirect = useRouter();
 
-
 // Arrow function to Signin user to supaBase
 const signIn = async () => {
-  if (email.value){
+  if (email.value) {
     try {
       await useUserStore().signIn(email.value, password.value);
       redirect.push({ path: "/" });
-      
-  } catch (error) {
-    console.error(error);
-    throw error;
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
   }
-  };
-
 };
 
+// Funcion para mostrar contraseña
+const showPassword = () => {
+  let passwordInput = password.value;
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+  } else {
+    passwordInput.type = "password";
+  }
+};
 
 </script>
 

@@ -7,14 +7,17 @@
       <router-link to="/account">Account</router-link>
     </div>
     <NewTask />
+
     <h1>Tasks:</h1>
-    <TaskItem
-      v-for="task in tasks"
-      :key="task.id"
-      :task="task"
-      @child-complete="completeTaskSupabase"
-      @edit-child="editTaskSupabase"
-    />
+    <div class="task-container">
+      <TaskItem
+        v-for="task in tasks"
+        :key="task.id"
+        :task="task"
+        @child-complete="completeTaskSupabase"
+        @edit-child="editTaskSupabase"
+      />
+    </div>
   </div>
 </template>
 
@@ -70,7 +73,14 @@ const editTaskSupabase = async (editTaskObject) => {
 };
 </script>
 
-<style></style>
+<style>
+.task-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  }
+</style>
 
 <!-- 
 **Hints**

@@ -6,15 +6,15 @@
     <p>{{ task.description }}</p>
     <!-- Boton de eliminar tarea -->
     <!-- <button @click="deleteTask">Delete {{ task.title }}</button> -->
-    <button @click="changeShowModal">Delete {{ task.title }}</button>
+    <button @click="changeShowModal">Delete Task</button>
 
 
 
 
     <!-- Boton de completar tarea -->
-    <button @click="completeTask">completada {{ task.title }}</button>
+    <button @click="completeTask">Task completed</button>
     <!-- Boton de editar tarea -->
-    <button @click="showInput">Edit {{ task.title }}</button>
+    <button @click="showInput">Edit Task</button>
     <div v-if="inputContainer">
       <input type="text" v-model="currentTaskTitle" />
       <input type="text" v-model="currentTaskDescription" />
@@ -111,18 +111,8 @@ const changeShowModal = () => {
 </script>
 
 <style>
-/* si pongo este style en style.css no funciona */
-.modal-container {  
-    position: absolute;
-    top: 50%;
-    left: 50%;
-   /* Para centrar del todo la ventana modal */
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 2em;
-    border-radius: 15px;
-    z-index: 2;
-  };
+
+
 
 
 </style>
