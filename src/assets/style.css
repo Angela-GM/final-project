@@ -62,3 +62,7 @@ h1 {
   }
 
 /* Account View */
+img {
+  width: 200px;
+  border-radius: 50%;
+}
