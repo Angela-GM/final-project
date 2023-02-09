@@ -62,6 +62,5 @@ export const useTaskStore = defineStore("tasks", () => {
     deleteTask,
     completeTask,
     editTaskSupabase,
-    avatarSupabase,
   };
 });
