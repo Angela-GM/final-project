@@ -43,17 +43,18 @@ export const useTaskStore = defineStore("tasks", () => {
       .match({ id: id });
   };
 
-  //Storage de supabse
-  const editTaskSupabase = async (name, id) => {
-    let { data: name } = await supabase.storage.from("avatars").match(id: id)
-  };
-
   // borrar tareas de supabase
   const deleteTask = async (id) => {
     const { data, error } = await supabase.from("tasks").delete().match({
       id: id,
     });
   };
+
+  //Storage de supabse
+  // const avatarSupabase = async (name, id) => {
+  //   let { data: name } = await supabase.storage.from("avatars").match(id: id)
+  // };
+
   return {
     tasksArr,
     fetchTasks,
@@ -61,5 +62,6 @@ export const useTaskStore = defineStore("tasks", () => {
     deleteTask,
     completeTask,
     editTaskSupabase,
+    avatarSupabase,
   };
 });

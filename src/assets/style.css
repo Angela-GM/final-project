@@ -52,5 +52,11 @@ h1 {
 }
 
 /* Home view */
+.task-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  }
 
 /* Account View */

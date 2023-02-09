@@ -74,12 +74,7 @@ const editTaskSupabase = async (editTaskObject) => {
 </script>
 
 <style>
-.task-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: flex-start;
-  }
+
 </style>
 
 <!-- 
