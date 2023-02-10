@@ -133,13 +133,14 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 - [x] Crear storage en Supabase
 - [x] Conectar a Vercel
 - [x] Crear página de perfil
-- [ ] Empezar a crear lógica para editar el perfil
+- [x] Empezar a crear lógica para editar el perfil
 
 #### Day Four
 
 ###### Viernes 10, Febrero 2023
 
-- [ ] Continuar con lógica para editar el perfil
+- [ ] Crear botón de mostrar/ocultar password
+- [ ] Terminar lógica de perfil
 - [ ] Empezar con el CSS
 
 #### Day Five

@@ -38,13 +38,9 @@
             :type="showPassword ? 'text' : 'password'"
             v-model="password"
           />
- 
-
-
-
-
-       
+       <!-- Boton/imagen mostrar/ocultar contraseña -->
       <img @click="showPassword = !showPassword" class="icon-img" :src="showPassword ? eyeImageShow : eyeImageNoShow" alt="icon eye">
+      
         </div>
 
         <button class="button" type="submit">Sign In</button>
@@ -79,8 +75,10 @@ const email = ref("");
 const password = ref("");
 const redirect = useRouter();
 const showPassword = ref(false);
-const eyeImageShow = ref("../icons/eye-regular.svg");
-const eyeImageNoShow = ref("../icons/eye-slash-regular.svg");
+const eyeImageShow = ref("/src/icons/eye-regular.svg");
+const eyeImageNoShow = ref("/src/icons/eye-slash-regular.svg");
+
+
 
 // Arrow function to Signin user to supaBase
 const signIn = async () => {
