@@ -19,7 +19,7 @@
       />
       <!-- input para subir imagen avatar nueva -->
 
-      <input type="file" name="new_avatar_url" @click="uploadImage">
+      <input type="file" name="avatar_url" @change="uploadAvatar" accept=".jpg, .jpeg, .png, .gif">
 
       <img class="icon-img" src="../icons/pen-to-square-solid.svg" alt="icon edit">
       </div>
@@ -106,34 +106,42 @@ async function editProfile() {
 
 
 //funcion para actulizar imagen de perfil
-const uploadImage = async (e) => {
-    const files = e.target.files;
-    try {
-        loading.value = true;
-        if (!files || files.length === 0) {
-        throw new Error("You must select an image to upload.");
-        };
+// -------------------------------------------
+// variables
+const prop = defineProps(['path', 'size'])
+const { path, size } = toRefs(prop)
 
-        const file = files[0];
-        const fileExt = file.name.split(".").pop();
-        const filePath = `${Math.random()}.${fileExt}`;
-        console.log(filePath);
+const emit = defineEmits(['upload', 'update:path'])
+const uploading = ref(false)
+const src = ref('')
+const files = ref()
 
-        let { error: uploadError } = await supabase.storage
-        .from("avatars")
-        .upload(filePath, file);
 
-        if (uploadError) throw uploadError;
-        avatar_url.value = filePath; 
-        // downloadImage() => {}
-        await downloadImage(filePath);
-    } catch (error) {
-        alert(error.message);
-    } finally {
-        loading.value = false;
+const uploadAvatar = async (evt) => {
+  files.value = evt.target.files
+  try {
+    uploading.value = true
+    if (!files.value || files.value.length === 0) {
+      throw new Error('You must select an image to upload.')
     }
-}
 
+    const file = files.value[0]
+    const fileExt = file.name.split('.').pop()
+    const filePath = `${Math.random()}.${fileExt}`
+
+    let { error: uploadError } = await supabase.storage.from('avatars').upload(filePath, file, { upsert: false});
+    avatar_url.value = "https://zkxclgazccxtzdbcydyq.supabase.co/storage/v1/object/public/avatars/" + filePath;
+
+
+    if (uploadError) throw uploadError
+    emit('update:path', filePath)
+    emit('upload')
+  } catch (error) {
+    alert(error.message)
+  } finally {
+    uploading.value = false
+  }
+};
 
 
 
