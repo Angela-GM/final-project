@@ -140,12 +140,14 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 ###### Viernes 10, Febrero 2023
 
 - [x] Crear botón de mostrar/ocultar password
-- [ ] Terminar lógica de perfil
-- [ ] Empezar con el CSS
+- [x] Terminar lógica de perfil
+- [x] Crear lógica para actulizar perfil y la foto de perfil
 
 #### Day Five
 
 ###### Lunes 13, Febrero 2023
+
+- [ ] Empezar con el CSS
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
