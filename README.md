@@ -131,7 +131,7 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 ###### Jueves 9, Febrero 2023
 
 - [x] Crear storage en Supabase
-- [x]Conectar a Vercel
+- [x] Conectar a Vercel
 - [x] Crear página de perfil
 - [ ] Empezar a crear lógica para editar el perfil
 

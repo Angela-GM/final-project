@@ -28,14 +28,23 @@
         </div>
         <div class="form-input">
           <label class="input-field-label" v-show="none">Password</label>
+          <!-- Input password -->
           <input
-            type="password"
+
             class="input-field"
             placeholder="**********"
             id="password"
-            v-model="password"
             required
+            :type="showPassword ? 'text' : 'password'"
+            v-model="password"
           />
+ 
+
+
+
+
+       
+      <img @click="showPassword = !showPassword" class="icon-img" :src="showPassword ? eyeImageShow : eyeImageNoShow" alt="icon eye">
         </div>
 
         <button class="button" type="submit">Sign In</button>
@@ -69,6 +78,9 @@ const buttonText = "Sign Up";
 const email = ref("");
 const password = ref("");
 const redirect = useRouter();
+const showPassword = ref(false);
+const eyeImageShow = ref("../icons/eye-regular.svg");
+const eyeImageNoShow = ref("../icons/eye-slash-regular.svg");
 
 // Arrow function to Signin user to supaBase
 const signIn = async () => {
@@ -84,15 +96,6 @@ const signIn = async () => {
 };
 
 // Funcion para mostrar contraseña
-const showPassword = () => {
-  let passwordInput = password.value;
-  if (passwordInput.type === "password") {
-    passwordInput.type = "text";
-  } else {
-    passwordInput.type = "password";
-  }
-};
-
 </script>
 
 <style></style>
