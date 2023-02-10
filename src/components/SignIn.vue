@@ -74,9 +74,11 @@ const buttonText = "Sign Up";
 const email = ref("");
 const password = ref("");
 const redirect = useRouter();
+
+// Variables para mostrar contrasña
 const showPassword = ref(false);
-const eyeImageShow = ref("/src/icons/eye-regular.svg");
-const eyeImageNoShow = ref("/src/icons/eye-slash-regular.svg");
+const eyeImageNoShow = ref("/src/icons/eye-regular.svg");
+const eyeImageShow = ref("/src/icons/eye-slash-regular.svg");
 
 
 

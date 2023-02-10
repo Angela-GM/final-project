@@ -24,24 +24,28 @@
         <div class="form-input">
           <label class="input-field-label">Password</label>
           <input
-            type="password"
+          :type="showPassword ? 'text' : 'password'"
             class="input-field"
             placeholder="**********"
             id="password"
             v-model="password"
             required
           />
+          <!-- Boton/imagen mostrar/ocultar contraseña -->
+      <img @click="showPassword = !showPassword" class="icon-img" :src="showPassword ? eyeImageShow : eyeImageNoShow" alt="icon eye">
         </div>
         <div class="form-input">
           <label class="input-field-label">Confirm password</label>
           <input
-            type="password"
+          :type="showPassword ? 'text' : 'password'"
             class="input-field"
             placeholder="**********"
             id="confirmPassword"
             v-model="confirmPassword"
             required
           />
+          <!-- Boton/imagen mostrar/ocultar contraseña -->
+      <img @click="showPassword = !showPassword" class="icon-img" :src="showPassword ? eyeImageShow : eyeImageNoShow" alt="icon eye">
         </div>
         <button class="button" type="submit">Sign Up</button>
         <p>
@@ -75,6 +79,11 @@ const buttonText = "Sign In";
 const email = ref("");
 const password = ref("");
 const confirmPassword = ref("");
+
+// variables para mostrar contraseña
+const showPassword = ref(false);
+const eyeImageNoShow = ref("/src/icons/eye-regular.svg");
+const eyeImageShow = ref("/src/icons/eye-slash-regular.svg");
 
 // Error Message
 const errorMsg = ref("");

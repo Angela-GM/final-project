@@ -123,7 +123,7 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 ###### Miercoles 8, Febrero 2023
 
 - [x] Crear lógica para el botón LogOut
-- [x] Se ha creado la lógica para que funcione el CRUD de las tareas
+- [x] Crear lógica para que funcione el CRUD de las tareas
 - [x] Crear modal para confirmar la eliminación de una tarea
 
 #### Day Three
@@ -131,7 +131,7 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 ###### Jueves 9, Febrero 2023
 
 - [x] Crear storage en Supabase
-- [x] Conectar a Vercel
+- [x] Despligue el proyecto con Vercel
 - [x] Crear página de perfil
 - [x] Empezar a crear lógica para editar el perfil
 
@@ -139,7 +139,7 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 ###### Viernes 10, Febrero 2023
 
-- [ ] Crear botón de mostrar/ocultar password
+- [x] Crear botón de mostrar/ocultar password
 - [ ] Terminar lógica de perfil
 - [ ] Empezar con el CSS
 
