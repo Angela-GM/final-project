@@ -16,8 +16,8 @@
     <!-- Boton de editar tarea -->
     <button @click="showInput">Edit Task</button>
     <div v-if="inputContainer">
-      <input type="text" v-model="currentTaskTitle" />
-      <input type="text" v-model="currentTaskDescription" />
+      <input type="text" v-model="currentTaskTitle" placeholder="Insert title..." />
+      <input type="text" v-model="currentTaskDescription" placeholder="Insert description..."/>
       <button @click="editTask">Update task</button>
     </div>
   </div>

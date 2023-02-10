@@ -52,7 +52,9 @@ export const useTaskStore = defineStore("tasks", () => {
 
   //Storage de supabse
   // const avatarSupabase = async (name, id) => {
-  //   let { data: name } = await supabase.storage.from("avatars").match(id: id)
+  //   let { data: name } = await supabase.storage
+  //     .from("avatars")
+  //     .match({ id: id });
   // };
 
   return {
@@ -62,5 +64,6 @@ export const useTaskStore = defineStore("tasks", () => {
     deleteTask,
     completeTask,
     editTaskSupabase,
+    // avatarSupabase,
   };
 });

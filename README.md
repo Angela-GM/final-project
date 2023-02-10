@@ -130,16 +130,17 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 ###### Jueves 9, Febrero 2023
 
-- [ ] Crear página de perfil
-- [ ] Crear lógica para editar el perfil
-- [ ] Conectar a Vercel
-- [ ] Empezar con el CSS
+- [x] Crear storage en Supabase
+- [x]Conectar a Vercel
+- [x] Crear página de perfil
+- [ ] Empezar a crear lógica para editar el perfil
 
 #### Day Four
 
 ###### Viernes 10, Febrero 2023
 
-- [ ] Continuar con el CSS
+- [ ] Continuar con lógica para editar el perfil
+- [ ] Empezar con el CSS
 
 #### Day Five
 

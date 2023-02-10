@@ -8,6 +8,16 @@
   --fontBody: "Helvetica";
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Outline */
+  /* outline: 1px solid #0000ff; */
+}
+
+
+
 
 /* SignIn Component */
 
@@ -61,7 +71,11 @@ h1 {
   }
 
 /* Account View */
-img {
+.profile-img {
   width: 200px;
   border-radius: 50%;
+}
+
+.icon-img {
+  width: 20px;
 }

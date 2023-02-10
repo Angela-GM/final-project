@@ -2,7 +2,7 @@
   <Nav />
 
   <!-- Name -->
-  <h1>Name: {{username}}</h1>
+  <h1>Name: {{name}}</h1>
   <!-- Edit name -->
 <div>
 
@@ -14,11 +14,9 @@
 
 
 
-  <img :src="avatar_url ? avatar_url : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'" alt="Profile picture">
+  <img class="profile-img" :src="avatar_url ? avatar_url : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'" alt="Profile picture">
   
-
-
-
+  <router-link to="/editprofile">Edit</router-link>
 
 </template>
 
@@ -37,7 +35,7 @@
   const username = ref(null);
   const website = ref(null);
   const avatar_url = ref(null);
-
+  const name = ref(null);
 
   // Ejecutar la funcion getProfile al cargar la página
   onMounted(() => {
@@ -50,6 +48,7 @@
     username.value = userStore.profile.username;
     avatar_url.value = userStore.profile.avatar_url;
     website.value = userStore.profile.website;
+    name.value = userStore.profile.name;
   }
 
   async function signOut() {
