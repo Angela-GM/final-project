@@ -42,6 +42,19 @@ export const useUserStore = defineStore("user", {
       }
     },
 
+    //Storage de supabse
+    async editProfile(username, website, avatar_url, name) {
+      let { data, error } = await supabase
+        .from("profiles")
+        .update({
+          name: name,
+          website: website,
+          username: username,
+          avatar_url: avatar_url,
+        })
+        .match({ user_id: this.user.id });
+    },
+
     async signIn(email, password) {
       const { user, error } = await supabase.auth.signIn(
         {

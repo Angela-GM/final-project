@@ -19,29 +19,31 @@
       />
       <!-- input para subir imagen avatar nueva -->
 
-      <input type="file" name="new_avatar_url">
+      <input type="file" name="new_avatar_url" @click="uploadImage">
+
       <img class="icon-img" src="../icons/pen-to-square-solid.svg" alt="icon edit">
       </div>
+
 
       
      
       <!-- edit name -->
       <div>
         <label for="name">Name:</label>
-        <input type="text" name="name" autocomplete="off" :value="name ? name : username" />
+        <input type="text" name="name" autocomplete="off" v-model="name" />
       </div>
       <!-- edit username -->
       <div>
         <label for="username"> Username: </label>
-        <input type="text" name="username" autocomplete="off" :value="username"/>
+        <input type="text" name="username" autocomplete="off" v-model="username"/>
       </div>
       <!-- edit website -->
       <div>
         <label for="website"> Website: </label>
-        <input type="text" name="website" autocomplete="off" :value="website" />
+        <input type="text" name="website" autocomplete="off" v-model="website" />
       </div>
 
-      <button>Save changes</button>
+      <button @click.prevent="editProfile">Save changes</button>
     </form>
 
 
@@ -55,6 +57,7 @@ import { supabase } from "../supabase";
 import { onMounted, ref, toRefs } from "vue";
 import { useUserStore } from "../stores/user";
 import Nav from "../components/Nav.vue";
+import { useRouter } from "vue-router";
 
 // declarar variable de la UserStore
 const userStore = useUserStore();
@@ -66,6 +69,8 @@ const website = ref(null);
 const avatar_url = ref(null);
 const name = ref(null);
 const image = ref(null)
+const redirect = useRouter();
+
 
 // Ejecutar la funcion getProfile al cargar la página
 onMounted(() => {
@@ -82,8 +87,52 @@ async function getProfile() {
   
 };
 
+// funcion para editar perfil
+async function editProfile() {
+  if (
+    website.value.length === 0  ||
+    username.value.length === 0 ||
+    name.value.length === 0
+  ) {
+    alert("The information can not be empty");
+  } else { 
+   
+    await userStore.fetchUser();
+    await userStore.editProfile(username.value, website.value, avatar_url.value, name.value);
+    redirect.push({ path: "/account" });
+  }
+
+}
 
 
+//funcion para actulizar imagen de perfil
+const uploadImage = async (e) => {
+    const files = e.target.files;
+    try {
+        loading.value = true;
+        if (!files || files.length === 0) {
+        throw new Error("You must select an image to upload.");
+        };
+
+        const file = files[0];
+        const fileExt = file.name.split(".").pop();
+        const filePath = `${Math.random()}.${fileExt}`;
+        console.log(filePath);
+
+        let { error: uploadError } = await supabase.storage
+        .from("avatars")
+        .upload(filePath, file);
+
+        if (uploadError) throw uploadError;
+        avatar_url.value = filePath; 
+        // downloadImage() => {}
+        await downloadImage(filePath);
+    } catch (error) {
+        alert(error.message);
+    } finally {
+        loading.value = false;
+    }
+}
 
 
 
