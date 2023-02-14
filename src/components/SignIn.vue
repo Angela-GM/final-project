@@ -13,7 +13,7 @@
       </figure>
       <!-- Titulo -->
       <h1>Welcome to TaskTime</h1>
-      <h3>Here starts your day.</h3>
+      <h3>Here starts your day!</h3>
       <h4>Sign In</h4>
     </div>
 

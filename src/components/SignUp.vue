@@ -1,10 +1,17 @@
 <template>
   <div class="container">
-
     <div class="header">
       <div class="header-description">
-        <h3 class="header-title">Register to ToDo App</h3>
-        <p class="header-subtitle">Start organizing your tasks!</p>
+        <!-- Logo -->
+        <figure>
+          <!-- imagen del logo -->
+          <img
+            src="https://img.icons8.com/clouds/300/null/todo-list.png"
+            alt="icon to do list"
+          />
+        </figure>
+        <h3 class="header-title">Register to TaskTime</h3>
+        <p class="header-subtitle">Here starts your day!</p>
       </div>
     </div>
 
@@ -23,8 +30,9 @@
         </div>
         <div class="form-input">
           <label class="input-field-label">Password</label>
-          <input
-          :type="showPassword ? 'text' : 'password'"
+          <div class="form-container-input-icon">
+            <input
+            :type="showPassword ? 'text' : 'password'"
             class="input-field"
             placeholder="**********"
             id="password"
@@ -32,12 +40,21 @@
             required
           />
           <!-- Boton/imagen mostrar/ocultar contraseña -->
-      <img @click="showPassword = !showPassword" class="icon-img" :src="showPassword ? eyeImageShow : eyeImageNoShow" alt="icon eye">
+          <img
+            @click="showPassword = !showPassword"
+            class="icon-img img-eye"
+            :src="showPassword ? eyeImageShow : eyeImageNoShow"
+            alt="icon eye"
+          />
+
+          </div>
+          
         </div>
         <div class="form-input">
           <label class="input-field-label">Confirm password</label>
-          <input
-          :type="showPassword ? 'text' : 'password'"
+          <div class="form-container-input-icon">
+            <input
+            :type="showPassword ? 'text' : 'password'"
             class="input-field"
             placeholder="**********"
             id="confirmPassword"
@@ -45,7 +62,13 @@
             required
           />
           <!-- Boton/imagen mostrar/ocultar contraseña -->
-      <img @click="showPassword = !showPassword" class="icon-img" :src="showPassword ? eyeImageShow : eyeImageNoShow" alt="icon eye">
+          <img
+            @click="showPassword = !showPassword"
+            class="icon-img img-eye"
+            :src="showPassword ? eyeImageShow : eyeImageNoShow"
+            alt="icon eye"
+          />
+          </div>
         </div>
         <button class="button" type="submit">Sign Up</button>
         <p>
@@ -59,7 +82,7 @@
       </div>
     </form>
 
-    <div v-show="errorMsg">{{errorMsg}}</div>
+    <div v-show="errorMsg">{{ errorMsg }}</div>
   </div>
 </template>
 
@@ -82,8 +105,12 @@ const confirmPassword = ref("");
 
 // variables para mostrar contraseña
 const showPassword = ref(false);
-const eyeImageNoShow = ref("https://img.icons8.com/material-outlined/24/null/visible--v1.png");
-const eyeImageShow = ref("https://img.icons8.com/material-outlined/24/null/hide.png");
+const eyeImageNoShow = ref(
+  "https://img.icons8.com/material-outlined/24/null/visible--v1.png"
+);
+const eyeImageShow = ref(
+  "https://img.icons8.com/material-outlined/24/null/hide.png"
+);
 // Error Message
 const errorMsg = ref("");
 
