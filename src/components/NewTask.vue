@@ -2,28 +2,29 @@
   <div class="container-new-task">
     <h1>Add a new Task</h1>
     <p>Keep your life organized, prepare for a trip ? Start here</p>
-    <p>Today's date is {{ newData }} </p>
-    
+    <p>Today's date is {{ newData }}</p>
+
     <div v-if="showErrorMessage">
       <p class="error-text">{{ errorMessage }}</p>
     </div>
-    <div>
+    <div class="form-new-task">
       <div class="input-field-new-task">
         <input
           type="text"
-          placeholder="Add a Task Title - Listen to Kendrick Lamar"
+          placeholder="Add a Task Title"
           v-model="name"
         />
       </div>
       <div class="input-field-new-task">
-        <textarea cols="30" rows="10" type="text"
-          placeholder="Add a Task Description - Look up Kendrick Lamar's FEAR album on spotify and listen to the whole album."
-          v-model="description" maxlength="500"></textarea>
-        <!-- <input
+        <textarea
+          cols="30"
+          rows="10"
           type="text"
-          placeholder="Add a Task Description - Look up Kendrick Lamar's FEAR album on spotify and listen to the whole album."
+          placeholder="Add a Task Description"
           v-model="description"
-        /> -->
+          maxlength="500"
+        ></textarea>
+
       </div>
       <button @click="addTask" class="button">Add</button>
     </div>
@@ -65,13 +66,14 @@ const addTask = () => {
   }
 };
 
-
 // variable para guardar la fecha actual
-const newData = ref(new Date().toLocaleString("en-US", {
+const newData = ref(
+  new Date().toLocaleString("en-US", {
     day: "numeric",
-        month: "long",
-        year: "numeric"
-      }));
+    month: "long",
+    year: "numeric",
+  })
+);
 </script>
 
 <style></style>
