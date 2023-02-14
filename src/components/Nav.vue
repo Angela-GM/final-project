@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
+    <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/>
     <router-link to="/">
       Home
     </router-link>
@@ -46,6 +46,7 @@ const getUser = useUserStore().user;
 // constant that calls user email from the useUSerStore
 const userEmail = getUser.email;
 
+
 // async function that calls the signOut method from the useUserStore and pushes the user back to the Auth view.
 const redirect = useRouter();
 
@@ -70,12 +71,16 @@ const signOut = async () => {
 }
 
 nav {
-  background-color: lightgray;
+  font-size: 0.8rem;
+  background-color: rgb(107, 89, 89);
   display: flex;
   width: 100%;
   justify-content: space-around;
   align-items: center;
+  color: white;
 }
+
+
 
 nav ul {
   list-style: none;

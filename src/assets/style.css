@@ -30,6 +30,26 @@ a {
   text-decoration: none;
 }
 
+a:active {
+  text-decoration: none;
+  color: grey;
+}
+
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: rgb(223, 199, 199);
+}
+
+/* Nav Component */
+
+
+
+
 /* SignIn Component */
 div.container {
   width: 90%;
@@ -106,6 +126,33 @@ span {
 
 /* SignUp Component */
 
+
+
+/* NewTask Component */
+.container-new-task {
+  width: 90%;
+  margin: auto;
+  margin-top: 3em;
+} 
+.container-new-task h1, p {
+  text-align: center;
+}
+
+.input-field-new-task {
+  display: flex;
+  justify-content: center;
+
+}
+
+.input-field-new-task textarea, input {
+  width: 100%;
+  border-radius: 5px;
+  padding: 15px 15px;
+  margin: 0.8em 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  resize: vertical;
+}
 
 
 

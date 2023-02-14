@@ -2,10 +2,10 @@
   <div class="wrapper">
     <Nav />
 
-  <div class="content">
+  <!-- <div class="content">
       <h3>Your account:</h3>
       <router-link to="/account">Account</router-link>
-    </div>
+    </div> -->
     <NewTask />
 
     <h1>Tasks:</h1>
