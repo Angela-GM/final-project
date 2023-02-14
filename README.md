@@ -168,7 +168,7 @@ En resumen, la sección "sobre mí" es una excelente manera de brindar a los usu
 
 Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/Angela-GM/final-project](https://github.com/Angela-GM/final-project)
 
 Presentation Link: [Insert here your presentation link](insert-link-here)
 
@@ -188,8 +188,8 @@ En esta sección se puede incluir información como:
 
 En resumen, la sección "agradecimientos" es una excelente manera de agradecer a las personas o instituciones que ayudaron en el desarrollo del proyecto. Esta sección también puede ser útil para dar crédito a los recursos o proyectos relacionados que fueron útiles durante el desarrollo.
 
-- [Icon Libraries](insert-link-here)
-- [Google Font Libraries](insert-link-here)
+- [Icon Libraries](https://iconos8.es/)
+- [Google Font Libraries](https://fonts.google.com/knowledge)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

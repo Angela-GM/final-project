@@ -91,8 +91,8 @@ const redirect = useRouter();
 
 // Variables para mostrar contrasña
 const showPassword = ref(false);
-const eyeImageNoShow = ref("/src/icons/eye-regular.svg");
-const eyeImageShow = ref("/src/icons/eye-slash-regular.svg");
+const eyeImageNoShow = ref("https://img.icons8.com/material-outlined/24/null/visible--v1.png");
+const eyeImageShow = ref("https://img.icons8.com/material-outlined/24/null/hide.png");
 
 // Arrow function to Signin user to supaBase
 const signIn = async () => {
