@@ -2,15 +2,20 @@
 
 <template>
   <div class="container">
-    <!-- <h3 class="header-title">Log In to ToDo App</h3>
-    <p class="header-subtitle">Estamos en la ruta de login. Aquí deberíais crear un form con la lógica correspondiente para que este permita al usuario loguearse con su email y su contraseña. Miraros la lógica de SignUp si necesitáis inspiración :)</p>
-    <p>Dont have an account? <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/></p> -->
-
     <!-- Logo de la web -->
-    <figure>Logo</figure>
-    <h1>Welcome to TaskTime</h1>
-    <h3>Here starts your day.</h3>
-    <h3>Sign In</h3>
+    <div class="logo">
+      <figure>
+        <!-- imagen del logo -->
+        <img
+          src="https://img.icons8.com/clouds/300/null/todo-list.png"
+          alt="icon to do list"
+        />
+      </figure>
+      <!-- Titulo -->
+      <h1>Welcome to TaskTime</h1>
+      <h3>Here starts your day.</h3>
+      <h4>Sign In</h4>
+    </div>
 
     <!-- Formulario SignIn -->
     <form @submit.prevent="signIn" class="form-sign-in">
@@ -30,7 +35,6 @@
           <label class="input-field-label" v-show="none">Password</label>
           <!-- Input password -->
           <input
-
             class="input-field"
             placeholder="**********"
             id="password"
@@ -38,23 +42,33 @@
             :type="showPassword ? 'text' : 'password'"
             v-model="password"
           />
-       <!-- Boton/imagen mostrar/ocultar contraseña -->
-      <img @click="showPassword = !showPassword" class="icon-img" :src="showPassword ? eyeImageShow : eyeImageNoShow" alt="icon eye">
-      
+          <!-- Boton/imagen mostrar/ocultar contraseña -->
+          <img
+            @click="showPassword = !showPassword"
+            class="icon-img"
+            :src="showPassword ? eyeImageShow : eyeImageNoShow"
+            alt="icon eye"
+          />
         </div>
 
         <button class="button" type="submit">Sign In</button>
       </div>
     </form>
 
-    <p>
-      Dont have an account?
-      <PersonalRouter
-        :route="route"
-        :buttonText="buttonText"
-        class="sign-up-link"
-      />
-    </p>
+
+      <span>
+        Dont have an account?<span> </span>  
+       
+      
+       <PersonalRouter
+          :route="route"
+          :buttonText="buttonText"
+          class="sign-up-link"
+        /></span>
+
+
+      
+
   </div>
 </template>
 
@@ -80,8 +94,6 @@ const showPassword = ref(false);
 const eyeImageNoShow = ref("/src/icons/eye-regular.svg");
 const eyeImageShow = ref("/src/icons/eye-slash-regular.svg");
 
-
-
 // Arrow function to Signin user to supaBase
 const signIn = async () => {
   if (email.value) {
@@ -95,7 +107,11 @@ const signIn = async () => {
   }
 };
 
-// Funcion para mostrar contraseña
+
 </script>
 
-<style></style>
+<style>
+
+
+
+</style>
