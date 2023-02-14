@@ -147,7 +147,15 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 ###### Lunes 13, Febrero 2023
 
-- [ ] Empezar con el CSS
+- [x] Empezar con el CSS de SignIn
+
+#### Day Six
+
+###### Martes 14, Febrero 2023
+
+- [x] Terminar con el CSS de SignIn
+- [ ] CSS de SingUp
+- [ ] CSS Navbar
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

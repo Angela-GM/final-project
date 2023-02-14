@@ -82,9 +82,8 @@ const confirmPassword = ref("");
 
 // variables para mostrar contraseña
 const showPassword = ref(false);
-const eyeImageNoShow = ref("/src/icons/eye-regular.svg");
-const eyeImageShow = ref("/src/icons/eye-slash-regular.svg");
-
+const eyeImageNoShow = ref("https://img.icons8.com/material-outlined/24/null/visible--v1.png");
+const eyeImageShow = ref("https://img.icons8.com/material-outlined/24/null/hide.png");
 // Error Message
 const errorMsg = ref("");
 

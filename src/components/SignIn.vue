@@ -34,41 +34,37 @@
         <div class="form-input">
           <label class="input-field-label" v-show="none">Password</label>
           <!-- Input password -->
-          <input
-            class="input-field"
-            placeholder="**********"
-            id="password"
-            required
-            :type="showPassword ? 'text' : 'password'"
-            v-model="password"
-          />
-          <!-- Boton/imagen mostrar/ocultar contraseña -->
-          <img
-            @click="showPassword = !showPassword"
-            class="icon-img"
-            :src="showPassword ? eyeImageShow : eyeImageNoShow"
-            alt="icon eye"
-          />
+          <div class="form-container-input-icon">
+            <input
+              class="input-field"
+              placeholder="**********"
+              id="password"
+              required
+              :type="showPassword ? 'text' : 'password'"
+              v-model="password"
+            />
+            <!-- Boton/imagen mostrar/ocultar contraseña -->
+            <img
+              @click="showPassword = !showPassword"
+              class="icon-img img-eye"
+              :src="showPassword ? eyeImageShow : eyeImageNoShow"
+              alt="icon eye"
+            />
+          </div>
         </div>
 
         <button class="button" type="submit">Sign In</button>
       </div>
     </form>
 
-
-      <span>
-        Dont have an account?<span> </span>  
-       
-      
-       <PersonalRouter
-          :route="route"
-          :buttonText="buttonText"
-          class="sign-up-link"
-        /></span>
-
-
-      
-
+    <span>
+      Dont have an account? 
+ 
+      <PersonalRouter
+        :route="route"
+        :buttonText="buttonText"
+        class="sign-up-link"
+    /></span>
   </div>
 </template>
 
@@ -91,8 +87,12 @@ const redirect = useRouter();
 
 // Variables para mostrar contrasña
 const showPassword = ref(false);
-const eyeImageNoShow = ref("https://img.icons8.com/material-outlined/24/null/visible--v1.png");
-const eyeImageShow = ref("https://img.icons8.com/material-outlined/24/null/hide.png");
+const eyeImageNoShow = ref(
+  "https://img.icons8.com/material-outlined/24/null/visible--v1.png"
+);
+const eyeImageShow = ref(
+  "https://img.icons8.com/material-outlined/24/null/hide.png"
+);
 
 // Arrow function to Signin user to supaBase
 const signIn = async () => {
@@ -106,12 +106,6 @@ const signIn = async () => {
     }
   }
 };
-
-
 </script>
 
-<style>
-
-
-
-</style>
+<style></style>
