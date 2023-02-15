@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <h3 :class="props.task.is_complete ? 'clase1' : 'clase2'">
+  <div class="container-card-task">
+    <h3 :class="props.task.is_complete ? 'task-complete' : 'task-no-complete'">
       {{ task.title }}
     </h3>
     <p>{{ task.description }}</p>

@@ -25,6 +25,9 @@ body {
   font-family: var(--fontFamily);
   font-size: var(--fontSize-sm);
 }
+h1 {
+  text-align: center;
+}
 
 a {
   text-decoration: none;
@@ -158,16 +161,13 @@ span {
   margin: 22px 0;
 }
 
-
-
-
 /* TaskItem */
-/* Estilo para tachar una tarea editada */
-.clase1 {
+/* Estilos para tachar una tarea editada */
+.task-complete {
   text-decoration: line-through;
 }
 
-.clase2 {
+.task-no-complete {
   text-decoration: none;
 }
 
@@ -194,6 +194,15 @@ span {
   right: 0;
   z-index: 1;
   background: rgba(0, 0, 0, 0.4);
+}
+
+
+.container-card-task {
+  border: #80ab82 solid 1px;
+  width: 100%;
+  border-radius: 5px;
+  margin: 0 1em;
+  padding: 16px 16px;
 }
 
 /* Home view */
