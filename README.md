@@ -50,10 +50,11 @@ Tener un archivo README.md bien estructurado y bien documentado también puede s
         <li><a href="#day-four">Viernes 10, Febrero 2023</a></li>
         <li><a href="#day-five">Lunes 13, Febrero 2023</a></li>
         <li><a href="#day-six">Martes 14, Febrero 2023</a></li>
-        <li><a href="#day-seven">Miercoles 15, Febrero 2023</a></li>
-        <li><a href="#day-eight">Jueves 16, Febrero 2023</a></li>
-        <li><a href="#day-nine">Viernes 17, Febrero 2023</a></li>
-        <li><a href="#day-ten">Lunes 20, Febrero 2023</a></li>
+        <li><a href="#day-seven">Lunes 20, Febrero 2023</a></li>
+        <li><a href="#day-eight">Martes 21, Febrero 2023</a></li>
+        <li><a href="#day-nine">Miercoles 22, Febrero 2023</a></li>
+        <li><a href="#day-ten">Jueves 23, Febrero 2023</a></li>
+        <li><a href="#day-eleven">Viernes 24, Febrero 2023</a></li>
       </ul>
     </li>
     <li><a href="#acerca">Acerca</a></li>
@@ -147,15 +148,49 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 ###### Lunes 13, Febrero 2023
 
-- [x] Empezar con el CSS de SignIn
+- [x] Empezar con el CSS de SignInc
 
 #### Day Six
 
 ###### Martes 14, Febrero 2023
 
 - [x] Terminar con el CSS de SignIn
-- [ ] CSS de SingUp
-- [ ] CSS Navbar
+
+#### Day Seven
+
+###### Lunes 20, Febrero 2023
+
+- [ ] Arreglar el código para que se guarde más de un perfil en la tabla profiles.
+- [ ] Hacer que se muestre el modal para informar al usuario que se ha registrado y debe confirmra el correo que ha recibido en SingUp.
+- [ ] Mostrar la información correctamente en el perfil.
+- [ ] Arreglar el codigo para que se guarde más de un perfil en la tabla profiles.
+- [ ] Maquetar TaskItem y modificar botones por iconos.
+
+#### Day Eight
+
+###### Martes 21, Febrero 2023
+
+- [ ] Maquetar el Navbar
+- [ ] Maquetar las TaskItem
+
+#### Day Nine
+
+###### Miercoles 22, Febrero 2023
+
+- [ ] Tarea
+
+#### Day Ten
+
+###### Jueves 23, Febrero 2023
+
+- [ ] Tarea
+
+#### Day Eleven
+
+###### Viernes 24, Febrero 2023
+
+- [ ] Preparar presentación
+- [ ] Presentación del proyecto
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -58,8 +58,8 @@
     </form>
 
     <span>
-      Dont have an account? 
- 
+      Dont have an account?
+
       <PersonalRouter
         :route="route"
         :buttonText="buttonText"

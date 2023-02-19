@@ -8,40 +8,38 @@
     <!-- <button @click="deleteTask">Delete {{ task.title }}</button> -->
     <button @click="changeShowModal">Delete Task</button>
 
-
-
-
     <!-- Boton de completar tarea -->
     <button @click="completeTask">Task completed</button>
     <!-- Boton de editar tarea -->
     <button @click="showInput">Edit Task</button>
     <div v-if="inputContainer">
-      <input type="text" v-model="currentTaskTitle" placeholder="Insert title..." />
-      <input type="text" v-model="currentTaskDescription" placeholder="Insert description..."/>
+      <input
+        type="text"
+        v-model="currentTaskTitle"
+        placeholder="Insert title..."
+      />
+      <input
+        type="text"
+        v-model="currentTaskDescription"
+        placeholder="Insert description..."
+      />
       <button @click="editTask">Update task</button>
     </div>
   </div>
   <!-- Ventana Modal al eliminar una tarea -->
   <!-- Overlay -->
   <transition name="fade">
-    <div class="modal-overlay" v-if="showModal">      
-    </div>
+    <div class="modal-overlay" v-if="showModal"></div>
   </transition>
 
   <transition name="fade">
-    <div class="modal-container" v-if="showModal">      
-        <h1>Are you sure you want to delete:</h1>
+    <div class="modal-container" v-if="showModal">
+      <h1>Are you sure you want to delete:</h1>
       <p>{{ task.title }}</p>
       <button @click="deleteTask">Eliminar</button>
-      <button @click="changeShowModal">Cerrar</button>   
+      <button @click="changeShowModal">Cerrar</button>
     </div>
   </transition>
-
-
-
-
-
-
 </template>
 
 <script setup>
@@ -105,17 +103,11 @@ const deleteTask = async () => {
 // variable booleana para mostrar o ocultar el modal
 let showModal = ref(false);
 const changeShowModal = () => {
-  showModal.value =! showModal.value
-
+  showModal.value = !showModal.value;
 };
 </script>
 
-<style>
-
-
-
-
-</style>
+<style></style>
 
 <!--
 **Hints**
