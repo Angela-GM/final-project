@@ -54,6 +54,34 @@ a:hover {
 }
 
 /* Nav Component */
+#logo {
+  width: 80px;
+}
+
+.log-out {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+nav {
+  font-size: 0.8rem;
+  padding: 0.3em 0;
+  background-color: #c8ede6;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+}
+
+nav ul {
+  list-style: none;
+  padding-inline-start: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 
 
@@ -107,6 +135,7 @@ span {
   margin: 8px 0;
   width: 100%;
 }
+
 .form-container-input-icon {
   position: relative;
 }
@@ -130,7 +159,7 @@ span {
 }
 
 .button:hover {
-  background-color: #d8c2c8;
+  background-color: #edc8cf;
   border: none;
 }
 

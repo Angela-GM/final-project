@@ -1,5 +1,10 @@
 <template>
   <nav>
+    <img
+      id="logo"
+      src="https://img.icons8.com/clouds/300/null/todo-list.png"
+      alt="logo imagen"
+    />
     <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link" />
     <!-- <router-link to="/"> Home </router-link> -->
 
@@ -14,10 +19,9 @@
     </ul>
 
     <div>
-      <ul>
+      <ul class="log-out">
         <li class="log-out-welcome">
-          <p v-if="username">Welcome, {{ username }}</p>
-          <p v-else>Welcome, {{ userEmail }}</p>
+          <p>Welcome, {{ userEmail }}</p>
         </li>
         <li>
           <button @click.prevent="signOut" class="button">Log out</button>
@@ -44,8 +48,6 @@ const getUser = useUserStore().user;
 
 // constant that calls user email from the useUSerStore
 const userEmail = getUser.email;
-const username = useUserStore().profile.username;
-console.log(username);
 
 // async function that calls the signOut method from the useUserStore and pushes the user back to the Auth view.
 const redirect = useRouter();
@@ -64,26 +66,4 @@ const signOut = async () => {
 };
 </script>
 
-<style>
-.navbar-img {
-  width: 90px;
-}
-
-nav {
-  font-size: 0.8rem;
-  background-color: #c8ede6;
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
-  color: white;
-}
-
-nav ul {
-  list-style: none;
-  padding-inline-start: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-</style>
+<style></style>

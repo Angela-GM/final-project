@@ -160,18 +160,21 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 ###### Lunes 20, Febrero 2023
 
-- [ ] Arreglar el código para que se guarde más de un perfil en la tabla profiles.
-- [ ] Hacer que se muestre el modal para informar al usuario que se ha registrado y debe confirmra el correo que ha recibido en SingUp.
-- [ ] Mostrar la información correctamente en el perfil.
-- [ ] Arreglar el codigo para que se guarde más de un perfil en la tabla profiles.
+- [x] Arreglar el código para que se guarde más de un perfil en la tabla profiles.
+- [x] Mostrar la información correctamente en el perfil.
+- [x] Maquetar EditProfile.
+- [ ] Maquetar el Navbar
 - [ ] Maquetar TaskItem y modificar botones por iconos.
+- [x] Actualizar Readme
 
 #### Day Eight
 
 ###### Martes 21, Febrero 2023
 
 - [ ] Maquetar el Navbar
+- [ ] Hacer que se muestre el modal para informar al usuario que se ha registrado y debe confirmra el correo que ha recibido en SingUp.
 - [ ] Maquetar las TaskItem
+- [ ] No poder editar la tarea si está completada.
 
 #### Day Nine
 
