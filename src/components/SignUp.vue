@@ -42,7 +42,7 @@
             <!-- Boton/imagen mostrar/ocultar contraseña -->
             <img
               @click="showPassword = !showPassword"
-              class="icon-img img-eye"
+              class="img-eye"
               :src="showPassword ? eyeImageShow : eyeImageNoShow"
               alt="icon eye"
             />
@@ -62,7 +62,7 @@
             <!-- Boton/imagen mostrar/ocultar contraseña -->
             <img
               @click="showPassword = !showPassword"
-              class="icon-img img-eye"
+              class="img-eye"
               :src="showPassword ? eyeImageShow : eyeImageNoShow"
               alt="icon eye"
             />

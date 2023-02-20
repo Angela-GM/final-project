@@ -1,6 +1,7 @@
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap");
 
+
 :root {
   --colorWhite: #ffff;
   --colorBlack: #231f20;
@@ -109,6 +110,8 @@ span {
   position: absolute;
   right: 15px;
   top: 24px;
+  width: 20px;
+
 }
 
 .button {
@@ -225,5 +228,7 @@ span {
 }
 
 .icon-img {
-  width: 20px;
+  width: 25px;
+  /* height: 20px; */
+  margin-right: 1em;
 }

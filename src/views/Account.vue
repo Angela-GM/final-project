@@ -15,15 +15,39 @@
       />
     </div>
     <!-- datos personales -->
-    <div>
-      <h3>Username: {{ username }}</h3>
-      <!-- Name -->
-      <p>Name: {{ name }}</p>
-      <!-- Website -->
-      <p>Website: {{ website }}</p>
+    <div class="profile-data">
+      <div>
+        <img
+          class="icon-img"
+          src="https://img.icons8.com/windows/32/000000/username.png"
+        />
+        <p>{{ username }}</p>
+      </div>
+      <div>
+        <!-- Name -->
+        <img
+          class="icon-img"
+          src="https://img.icons8.com/windows/32/000000/name-tag-woman-horizontal.png"
+        />
+
+        <p>{{ name }}</p>
+      </div>
+
+      <div>
+        <!-- Website -->
+        <img
+          class="icon-img"
+          src="https://img.icons8.com/material-outlined/24/000000/internet.png"
+        />
+        <p>{{ website }}</p>
+      </div>
     </div>
 
-    <router-link to="/editprofile">Edit</router-link>
+    <div class="center-btn">
+      <router-link to="/editprofile"
+        ><div class="button btn-edit-profile">Edit</div></router-link
+      >
+    </div>
   </div>
 </template>
 
@@ -75,7 +99,46 @@ async function signOut() {
 .profile-card {
   width: 90%;
   padding: 2em 0;
-  border: 1px solid black;
-  margin: auto;
+  /* border: 1px solid black; */
+  margin: 2em auto auto auto;
+  padding: 2em 2em;
+  border-radius: 20px;
+  box-shadow: 0px 0px 9px 0px rgba(128, 128, 128, 0.719);
+  /* background-color: #e5f4ec; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-card > div p,
+.profile-card > div img {
+  font-size: 0.8rem;
+  margin-top: 1em;
+}
+
+.profile-card > div:nth-last-child(2) {
+  margin-bottom: 2em;
+}
+
+.profile-data {
+  margin-top: 2em;
+}
+
+.profile-data div {
+  display: flex;
+  align-items: center;
+}
+
+.btn-edit-profile {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-edit-profile p {
+  color: white;
+}
+
+.center-btn {
+  width: 100%;
 }
 </style>
