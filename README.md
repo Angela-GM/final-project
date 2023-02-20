@@ -251,7 +251,7 @@ En resumen, la sección "desafío técnico" es una excelente manera de brindar a
 
 ## Grande Error
 
-La sección "grande error" en un archivo README es una sección opcional que proporciona información sobre los errores importantes cometidos durante el desarrollo del proyecto.
+<!-- La sección "grande error" en un archivo README es una sección opcional que proporciona información sobre los errores importantes cometidos durante el desarrollo del proyecto.
 
 En esta sección se puede incluir información como:
 
@@ -260,4 +260,19 @@ En esta sección se puede incluir información como:
 - Soluciones implementadas para corregir el error.
 - Lecciones aprendidas y recomendaciones para evitar errores similares en el futuro.
 
-En resumen, la sección "grande error" es una forma de ser transparente sobre los errores cometidos durante el desarrollo del proyecto. También puede ser útil para otros desarrolladores que trabajen en el proyecto, ya que les brinda información valiosa sobre problemas potenciales y cómo se abordaron.
+En resumen, la sección "grande error" es una forma de ser transparente sobre los errores cometidos durante el desarrollo del proyecto. También puede ser útil para otros desarrolladores que trabajen en el proyecto, ya que les brinda información valiosa sobre problemas potenciales y cómo se abordaron. -->
+<h2>Error en el Registro de Usuarios</h2>
+
+<h3>Descripción del Error</h3>
+Durante el proceso de registro de usuarios en la aplicación web, se identificó que los datos del nuevo usuario no estaban siendo guardados correctamente en la tabla "profiles", a pesar de que sí se estaban almacenando en la tabla "auth".
+
+<h3>Consecuencias del Error</h3>
+El error impedía que los usuarios pudieran registrarse correctamente en la aplicación, lo que generaba una mala experiencia de usuario y afectaba el rendimiento del sitio web.
+
+<h3>Soluciones Implementadas</h3>
+Después de realizar una exhaustiva investigación, se descubrió que una de las columnas de la tabla "profiles" estaba configurada para no aceptar valores nulos. Al registrar un nuevo usuario, esta columna no estaba recibiendo ningún dato y, por lo tanto, el registro no se completaba correctamente. La solución consistió en modificar la configuración de la columna para que pudiera aceptar valores nulos, lo que permitió que los datos del nuevo usuario fueran guardados correctamente en ambas tablas.
+
+<h3>Lecciones Aprendidas y Recomendaciones</h3>
+Este error me enseñó la importancia de revisar cuidadosamente las configuraciones de las tablas en la base de datos y de realizar pruebas exhaustivas durante el proceso de desarrollo y pruebas de la aplicación. Además, aprendí a utilizar las herramientas del Inspector del navegador para identificar y resolver errores que provienen de la base de datos.
+
+Recomiendo realizar pruebas periódicas en la base de datos para asegurarse de que todas las configuraciones sean las adecuadas y de que no existan errores similares que puedan afectar el correcto funcionamiento de la aplicación web.
