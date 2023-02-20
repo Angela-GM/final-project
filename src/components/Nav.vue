@@ -1,12 +1,12 @@
 <template>
   <nav>
     <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link" />
-    <router-link to="/"> Home </router-link>
+    <!-- <router-link to="/"> Home </router-link> -->
 
     <ul>
-      <li>
+      <!-- <li>
         <router-link to="/">Task Manager</router-link>
-      </li>
+      </li> -->
 
       <li>
         <router-link to="/account">Your Account</router-link>
@@ -16,7 +16,8 @@
     <div>
       <ul>
         <li class="log-out-welcome">
-          <p>Welcome, {{ userEmail }}</p>
+          <p v-if="username">Welcome, {{ username }}</p>
+          <p v-else>Welcome, {{ userEmail }}</p>
         </li>
         <li>
           <button @click.prevent="signOut" class="button">Log out</button>
@@ -35,7 +36,7 @@ import { ref } from "vue";
 
 //constant to save a variable that will hold the use router method
 const route = "/";
-const buttonText = "Todo app";
+const buttonText = "Task Time";
 
 // constant to save a variable that will get the user from store with a computed function imported from vue
 // const getUser = computed(() => useUserStore().user);
@@ -43,6 +44,8 @@ const getUser = useUserStore().user;
 
 // constant that calls user email from the useUSerStore
 const userEmail = getUser.email;
+const username = useUserStore().profile.username;
+console.log(username);
 
 // async function that calls the signOut method from the useUserStore and pushes the user back to the Auth view.
 const redirect = useRouter();
