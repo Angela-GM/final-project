@@ -30,6 +30,10 @@ body {
   text-align: center;
 } */
 
+label {
+  display: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -224,6 +228,7 @@ span {
   height: 200px;
   object-fit: contain;
   border-radius: 50%;
+  margin-top: 2em;
 
 }
 
@@ -231,4 +236,59 @@ span {
   width: 25px;
   /* height: 20px; */
   margin-right: 1em;
+}
+
+.profile-card {
+  width: 90%;
+  padding: 2em 0;
+  /* border: 1px solid black; */
+  margin: 2em auto auto auto;
+  padding: 2em 2em;
+  border-radius: 20px;
+  box-shadow: 0px 0px 9px 0px rgba(128, 128, 128, 0.719);
+  /* background-color: #e5f4ec; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-card > div p,
+.profile-card > div img {
+  font-size: 0.8rem;
+  margin-top: 1em;
+}
+
+.profile-card > div:nth-last-child(2) {
+  margin-bottom: 2em;
+}
+
+.profile-data {
+  margin-top: 2em;
+}
+
+.profile-data div {
+  display: flex;
+  align-items: center;
+}
+
+.btn-edit-profile {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-edit-profile p {
+  color: white;
+}
+
+.center-btn {
+  width: 100%;
+}
+
+/* Edit profile */
+#input-file {
+  resize: none;
+}
+
+.margin-top{
+  margin-top: 2em;
 }
