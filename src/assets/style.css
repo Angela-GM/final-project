@@ -6,7 +6,7 @@
   --colorBlack: #231f20;
   --colorRed: #d52941;
   --colorOrange: #ff9f1c;
-  --colorGreem: #80ab82;
+  --colorGreem: #c8ede6;
   --fontSize-sm: 16px;
   --fontFamily: "Poppins", sans-serif;
   --fontTitle: "Arial";
@@ -25,9 +25,9 @@ body {
   font-family: var(--fontFamily);
   font-size: var(--fontSize-sm);
 }
-h1 {
+/* h1 {
   text-align: center;
-}
+} */
 
 a {
   text-decoration: none;
@@ -97,7 +97,7 @@ span {
 .input-field {
   padding: 15px 15px;
   border: none;
-  background: #e0ebe0;
+  background: hsl(169, 51%, 86%, 40%);
   border-radius: 5px;
   margin: 8px 0;
   width: 100%;
@@ -137,7 +137,7 @@ span {
   margin: auto;
   margin-top: 3em;
 } 
-.container-new-task h1, p {
+.container-new-task h1, .container-new-task p {
   text-align: center;
 }
 
@@ -218,7 +218,10 @@ span {
 /* Account View */
 .profile-img {
   width: 200px;
+  height: 200px;
+  object-fit: contain;
   border-radius: 50%;
+
 }
 
 .icon-img {

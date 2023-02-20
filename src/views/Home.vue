@@ -2,7 +2,7 @@
   <div class="wrapper">
     <Nav />
 
-  <!-- <div class="content">
+    <!-- <div class="content">
       <h3>Your account:</h3>
       <router-link to="/account">Account</router-link>
     </div> -->
@@ -18,9 +18,7 @@
         @edit-child="editTaskSupabase"
       />
     </div>
-
-</div>
-    
+  </div>
 </template>
 
 <script setup>
@@ -50,15 +48,15 @@ onUpdated(() => {
 
 const completeTaskSupabase = async (taskObject) => {
   // initial log to verifiy that is connected
-  console.log("click me");
+  // console.log("click me");
   // log to verifiy that we are recievign the data from the childComp named "taskItem" and view it on the console
-  console.log(taskObject.id);
-  console.log(taskObject.is_complete);
+  // console.log(taskObject.id);
+  // console.log(taskObject.is_complete);
   // variable to store the OPPOSITE value of the data received from the child component with the logical operator "!" !===opposite
   let changeTaskBooleanValue = !taskObject.is_complete;
   let taskId = taskObject.id;
   // log to verify that we have changed correctly the value of the recived data
-  console.log(changeTaskBooleanValue, taskId);
+  // console.log(changeTaskBooleanValue, taskId);
   await taskStore.completeTask(changeTaskBooleanValue, taskId);
   //getTasks();
 };
@@ -75,9 +73,7 @@ const editTaskSupabase = async (editTaskObject) => {
 };
 </script>
 
-<style>
-
-</style>
+<style></style>
 
 <!-- 
 **Hints**

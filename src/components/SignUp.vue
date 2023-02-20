@@ -129,7 +129,7 @@ const errorMsg = ref("");
 const redirect = useRouter();
 
 // Modal de confirmación
-const showModalConfirmation = ref(false);
+// const showModalConfirmation = ref(false);
 
 // Arrow function to SignUp user to supaBase with a timeOut() method for showing the error
 const signUp = async () => {

@@ -21,7 +21,7 @@
     <form @submit.prevent="signIn" class="form-sign-in">
       <div class="form">
         <div class="form-input">
-          <label class="input-field-label" v-show="none">E-mail</label>
+          <label class="input-field-label" v-if="false">E-mail</label>
           <input
             type="email"
             class="input-field"
@@ -32,7 +32,7 @@
           />
         </div>
         <div class="form-input">
-          <label class="input-field-label" v-show="none">Password</label>
+          <label class="input-field-label" v-if="false">Password</label>
           <!-- Input password -->
           <div class="form-container-input-icon">
             <input
