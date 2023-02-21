@@ -8,7 +8,6 @@
     </div> -->
     <NewTask />
 
-    <h1>Tasks:</h1>
     <div class="task-container">
       <TaskItem
         v-for="task in tasks"

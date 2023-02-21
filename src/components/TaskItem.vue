@@ -1,5 +1,10 @@
 <template>
-  <div class="container-card-task">
+  <div
+    class="container-card-task"
+    :id="
+      props.task.is_complete ? 'bakcground-color-green' : 'bakcground-color-red'
+    "
+  >
     <h3 :class="props.task.is_complete ? 'task-complete' : 'task-no-complete'">
       {{ task.title }}
     </h3>
@@ -22,9 +27,8 @@
         <img src="https://img.icons8.com/color/48/null/edit--v3.png" />
       </button>
     </div>
-    <i class="fa-solid fa-user"></i>
 
-    <div v-if="inputContainer">
+    <div v-if="inputContainer" class="container-edit">
       <input
         type="text"
         v-model="currentTaskTitle"
