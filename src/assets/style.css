@@ -207,11 +207,22 @@ span {
   text-decoration: none;
 }
 
+.container-card-task button {
+  border: none;
+  background: none;
+
+}
+
+.container-card-task div {
+  border: 1px solid blue;
+  
+}
+
 /* modal para eliminar tarea */
 /* Overlay de la pantalla al abrir el modal */
 
 .modal-container {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   /* Para centrar del todo la ventana modal */
@@ -224,7 +235,7 @@ span {
 }
 /* estilos para la vental modal */
 .modal-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;

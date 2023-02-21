@@ -3,15 +3,27 @@
     <h3 :class="props.task.is_complete ? 'task-complete' : 'task-no-complete'">
       {{ task.title }}
     </h3>
-    <p>{{ task.description }}</p>
-    <!-- Boton de eliminar tarea -->
-    <!-- <button @click="deleteTask">Delete {{ task.title }}</button> -->
-    <button @click="changeShowModal">Delete Task</button>
+    <p :class="props.task.is_complete ? 'task-complete' : 'task-no-complete'">
+      {{ task.description }}
+    </p>
 
-    <!-- Boton de completar tarea -->
-    <button @click="completeTask">Task completed</button>
-    <!-- Boton de editar tarea -->
-    <button @click="showInput">Edit Task</button>
+    <div>
+      <!-- Boton de eliminar tarea -->
+      <button @click="changeShowModal">
+        <img src="https://img.icons8.com/color/48/null/delete-sign--v3.png" />
+      </button>
+
+      <!-- Boton de completar tarea -->
+      <button @click="completeTask">
+        <img src="https://img.icons8.com/color/48/null/checked--v1.png" />
+      </button>
+      <!-- Boton de editar tarea -->
+      <button @click="showInput">
+        <img src="https://img.icons8.com/color/48/null/edit--v3.png" />
+      </button>
+    </div>
+    <i class="fa-solid fa-user"></i>
+
     <div v-if="inputContainer">
       <input
         type="text"
