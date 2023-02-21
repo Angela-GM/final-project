@@ -173,7 +173,7 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 - [ ] Maquetar el Navbar
 - [x] Hacer que se muestre el modal para informar al usuario que se ha registrado y debe confirmar el correo que ha recibido en SingUp.
-- [ ] Arreglar el modal de eliminar tarea, se muestra siempre al principio de la página, pero cuando se elimina una tarea del final, el usuario no ve que el modal se ha mostrado.
+- [x] Arreglar el modal de eliminar tarea, se muestra siempre al principio de la página, pero cuando se elimina una tarea del final, el usuario no ve que el modal se ha mostrado.
 - [ ] Maquetar las TaskItem
 - [ ] No poder editar la tarea si está completada.
 
