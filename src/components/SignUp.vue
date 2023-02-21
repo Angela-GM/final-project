@@ -85,20 +85,20 @@
 
   <!-- Ventana Modal al eliminar una tarea -->
   <!-- Overlay -->
-  <!-- <transition name="fade">
+  <transition name="fade">
     <div class="modal-overlay" v-if="showModalConfirmation"></div>
   </transition>
 
   <transition name="fade">
     <div class="modal-container" v-if="showModalConfirmation">
       <h1>Welcome to TaskTime</h1>
-      <button @click="!showModalConfirmation">Cerrar</button>
+      <button @click="redirectHome">Cerrar</button>
     </div>
-  </transition> -->
+  </transition>
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, watch, watchEffect } from "vue";
 import PersonalRouter from "./PersonalRouter.vue";
 import { supabase } from "../supabase";
 import { useRouter } from "vue-router";
@@ -129,7 +129,20 @@ const errorMsg = ref("");
 const redirect = useRouter();
 
 // Modal de confirmación
-// const showModalConfirmation = ref(false);
+let showModalConfirmation = ref(false);
+
+// funcion watch para comprobar si cambia el valor de la variable showModalConfirmation
+// watchEffect(() => {
+//   if (showModalConfirmation === true) {
+//     console.log("Comprobamos que entramos");
+//   }
+// });
+
+// funcion para rediregir al usuario al home
+const redirectHome = () => {
+  // redirects user to the homeView
+  redirect.push({ path: "/auth/login" });
+};
 
 // Arrow function to SignUp user to supaBase with a timeOut() method for showing the error
 const signUp = async () => {
@@ -137,13 +150,13 @@ const signUp = async () => {
     try {
       // calls the user store and send the users info to backend to logIn
       await useUserStore().signUp(email.value, password.value);
-
       //hay que añadir un modal para informar al usuario que debe confirmar su correo
       //debe cambiar el valor de una variable de false a true
-      // showModalConfirmation = true;
+      showModalConfirmation.value = true;
+      console.log(showModalConfirmation.value);
 
       // redirects user to the homeView
-      redirect.push({ path: "/auth/login" });
+      // redirect.push({ path: "/auth/login" });
     } catch (error) {
       // displays error message
       errorMsg.value = error.message;
