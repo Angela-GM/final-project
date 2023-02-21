@@ -144,6 +144,7 @@ const editTask = () => {
       id: props.task.id,
     };
     emit("editChild", newTaskEdited);
+    inputContainer.value = false;
   }
 };
 
