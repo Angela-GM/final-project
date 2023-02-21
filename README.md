@@ -172,7 +172,7 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 ###### Martes 21, Febrero 2023
 
 - [ ] Maquetar el Navbar
-- [ ] Hacer que se muestre el modal para informar al usuario que se ha registrado y debe confirmra el correo que ha recibido en SingUp.
+- [x] Hacer que se muestre el modal para informar al usuario que se ha registrado y debe confirmar el correo que ha recibido en SingUp.
 - [ ] Maquetar las TaskItem
 - [ ] No poder editar la tarea si está completada.
 

@@ -131,13 +131,6 @@ const redirect = useRouter();
 // Modal de confirmación
 let showModalConfirmation = ref(false);
 
-// funcion watch para comprobar si cambia el valor de la variable showModalConfirmation
-// watchEffect(() => {
-//   if (showModalConfirmation === true) {
-//     console.log("Comprobamos que entramos");
-//   }
-// });
-
 // funcion para rediregir al usuario al home
 const redirectHome = () => {
   // redirects user to the homeView
@@ -153,7 +146,7 @@ const signUp = async () => {
       //hay que añadir un modal para informar al usuario que debe confirmar su correo
       //debe cambiar el valor de una variable de false a true
       showModalConfirmation.value = true;
-      console.log(showModalConfirmation.value);
+      // console.log(showModalConfirmation.value);
 
       // redirects user to the homeView
       // redirect.push({ path: "/auth/login" });
