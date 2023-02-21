@@ -18,9 +18,28 @@
         <img src="https://img.icons8.com/color/48/null/delete-sign--v3.png" />
       </button>
 
-      <!-- Boton de completar tarea -->
-      <button @click="completeTask">
-        <img src="https://img.icons8.com/color/48/null/checked--v1.png" />
+      <!-- Boton de completar tarea cuando se está editando una tarea-->
+      <button v-if="inputContainer">
+        <img
+          id="disable-img2"
+          class="disable-img"
+          :src="
+            props.task.is_complete
+              ? 'https://img.icons8.com/color/48/null/checked--v1.png'
+              : 'https://img.icons8.com/color/48/null/checked--v3.png'
+          "
+        />
+      </button>
+
+      <!-- Boton de completar tarea normal-->
+      <button @click="completeTask" v-else>
+        <img
+          :src="
+            props.task.is_complete
+              ? 'https://img.icons8.com/color/48/null/checked--v1.png'
+              : 'https://img.icons8.com/color/48/null/checked--v3.png'
+          "
+        />
       </button>
       <!-- Boton de editar tarea cuando la tarea no está completada-->
       <button @click="showInput" v-if="!props.task.is_complete">
@@ -41,12 +60,24 @@
         v-model="currentTaskTitle"
         placeholder="Insert title..."
       />
-      <input
+      <textarea
+        class="edit-description-task"
+        v-model="currentTaskDescription"
+        cols="30"
+        rows="10"
+        type="text"
+        placeholder="Add a Task Description"
+        maxlength="500"
+      ></textarea>
+
+      <!-- <input
         type="text"
         v-model="currentTaskDescription"
         placeholder="Insert description..."
-      />
-      <button @click="editTask">Update task</button>
+      /> -->
+      <button class="button" id="btn-update-task" @click="editTask">
+        Update task
+      </button>
     </div>
   </div>
   <!-- Ventana Modal al eliminar una tarea -->

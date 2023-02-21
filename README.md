@@ -172,10 +172,13 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 ###### Martes 21, Febrero 2023
 
 - [ ] Maquetar el Navbar
+- [ ] Maquetar Modal de eliminar tarea
 - [x] Hacer que se muestre el modal para informar al usuario que se ha registrado y debe confirmar el correo que ha recibido en SingUp.
 - [x] Arreglar el modal de eliminar tarea, se muestra siempre al principio de la página, pero cuando se elimina una tarea del final, el usuario no ve que el modal se ha mostrado.
-- [ ] Maquetar las TaskItem
-- [ ] No poder editar la tarea si está completada.
+- [x] Maquetar las TaskItem
+- [x] No poder editar la tarea si está completada.
+- [ ] Crear un componente footer
+- [ ] Cambiar iconos del Perfil
 
 #### Day Nine
 
