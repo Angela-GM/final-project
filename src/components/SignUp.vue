@@ -69,14 +69,14 @@
           </div>
         </div>
         <button class="button" type="submit">Sign Up</button>
-        <p>
+        <span>
           Have an account?
           <PersonalRouter
             :route="route"
             :buttonText="buttonText"
             class="sign-up-link"
           />
-        </p>
+        </span>
       </div>
     </form>
 
@@ -90,9 +90,12 @@
   </transition>
 
   <transition name="fade">
-    <div class="modal-container" v-if="showModalConfirmation">
+    <div class="modal-container modal-register" v-if="showModalConfirmation">
       <h1>Welcome to TaskTime</h1>
-      <button @click="redirectHome">Cerrar</button>
+      <p>Check your email account to complete the registration</p>
+      <button @click="redirectHome">
+        <img src="https://img.icons8.com/color/48/null/checked--v1.png" />
+      </button>
     </div>
   </transition>
 </template>
