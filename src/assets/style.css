@@ -215,12 +215,17 @@ span {
   box-shadow: 0px 0px 9px 0px rgba(128, 128, 128, 0.719);
 
 }
+/* id para cambiar etilo del boton editar, si está completada o no la tarea */
+#disable-img{
+  filter: grayscale(1);
+}
 
+/* Estilos para cambiar el fondo, si la tarea está completaa */
 #bakcground-color-green {
   background-color: #c8ede6;
 
 }
-
+/* Estilos para cambiar el fondo, si la tarea NO está completaa */
 #bakcground-color-red {
   background-color: #edc8cf;
 

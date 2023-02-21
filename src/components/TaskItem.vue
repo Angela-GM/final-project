@@ -22,9 +22,16 @@
       <button @click="completeTask">
         <img src="https://img.icons8.com/color/48/null/checked--v1.png" />
       </button>
-      <!-- Boton de editar tarea -->
-      <button @click="showInput">
+      <!-- Boton de editar tarea cuando la tarea no está completada-->
+      <button @click="showInput" v-if="!props.task.is_complete">
         <img src="https://img.icons8.com/color/48/null/edit--v3.png" />
+      </button>
+      <!-- Boton de editar tarea cuando la tarea SI está completada-->
+      <button v-else>
+        <img
+          id="disable-img"
+          src="https://img.icons8.com/color/48/null/edit--v3.png"
+        />
       </button>
     </div>
 
