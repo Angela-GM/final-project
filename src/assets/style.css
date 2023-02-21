@@ -246,7 +246,7 @@ span {
 }
 /* Estilos para cambiar el fondo, si la tarea NO está completaa */
 #bakcground-color-red {
-  background-color: #edc8cf;
+  /* background-color: #edc8cf; */
 
 }
 
@@ -306,6 +306,28 @@ span {
   border: none;
 }
 
+.temporizador {
+  display: flex;
+  flex-direction: column;
+}
+
+.temporizador button {
+  position: absolute;
+  right: 70px;
+}
+.temporizador button i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+#timer {
+  /* background-color: #c8ede6; */
+  padding: 1rem;
+  color: 371219;
+  position: relative;
+  font-size: 2rem;
+  border: 3px dotted  #c8ede6;
+}
+
 
 /* modal para eliminar tarea */
 /* Overlay de la pantalla al abrir el modal */
@@ -326,7 +348,7 @@ span {
 .container-card-task:last-child {
   margin-bottom: 2em;
 }
-/* estilos para la vental modal */
+/* estilos para modal */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -426,10 +448,16 @@ span {
   width: 100%;
 }
 
+
+
+
 /* Edit profile */
+
 #input-file {
   resize: none;
+ 
 }
+
 
 .margin-top{
   margin-top: 2em;

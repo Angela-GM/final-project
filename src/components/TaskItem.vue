@@ -5,10 +5,18 @@
       props.task.is_complete ? 'bakcground-color-green' : 'bakcground-color-red'
     "
   >
+    <h3 :class="props.task.is_complete ? 'task-complete' : 'task-no-complete'">
+      {{ task.title }}
+    </h3>
+    <p :class="props.task.is_complete ? 'task-complete' : 'task-no-complete'">
+      {{ task.description }}
+    </p>
+
     <!-- Temporizador de tareas -->
-    <div>
-      <div>{{ task.name }}</div>
-      <div>Time elapsed: {{ formatTime(time) }}</div>
+    <div class="temporizador" v-show="!props.task.is_complete">
+      <!-- <div>{{ task.name }}</div> -->
+      <p id="timer">{{ formatTime(time) }}</p>
+
       <button v-if="!started" @click="startTimer">
         <i class="fa-solid fa-play"></i>
       </button>
@@ -16,12 +24,6 @@
         <i class="fa-solid fa-stop"></i>
       </button>
     </div>
-    <h3 :class="props.task.is_complete ? 'task-complete' : 'task-no-complete'">
-      {{ task.title }}
-    </h3>
-    <p :class="props.task.is_complete ? 'task-complete' : 'task-no-complete'">
-      {{ task.description }}
-    </p>
 
     <div>
       <!-- Boton de eliminar tarea -->
@@ -158,7 +160,6 @@ const startTimer = () => {
 const stopTimer = () => {
   clearInterval(timer.value);
   started.value = false;
-  time.value = props.task.time_task;
 };
 
 // Transformar tiempo en hora, minutos y segundos

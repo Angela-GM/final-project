@@ -171,21 +171,23 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 ###### Martes 21, Febrero 2023
 
-- [ ] Maquetar el Navbar
-- [ ] Maquetar Modal de eliminar tarea
 - [x] Hacer que se muestre el modal para informar al usuario que se ha registrado y debe confirmar el correo que ha recibido en SingUp.
 - [x] Arreglar el modal de eliminar tarea, se muestra siempre al principio de la página, pero cuando se elimina una tarea del final, el usuario no ve que el modal se ha mostrado.
 - [x] Maquetar las TaskItem
 - [x] No poder editar la tarea si está completada.
-- [ ] Crear un componente footer
-- [ ] Cambiar iconos del Perfil
+- [x] Crear un componente footer y maquetar
 
 #### Day Nine
 
 ###### Miercoles 22, Febrero 2023
 
 - [ ] Menú Hamburguesa
+- [ ] Maquetar Modal de eliminar tarea
 - [ ] Poner el footer al final de la página, aunque tenga poco contenido el resto de la web.
+- [ ] Cambiar Favicon
+- [ ] Maquetar el Navbar
+- [ ] Maquetar input de seleccionar archivo en Edit Profile (opcional)
+- [ ] Hacer que el tiempo de cada tarea se quede registrado (conectar con supabase y crear columna time_task en la tabla tasks) (opcional)
 
 #### Day Ten
 
@@ -239,7 +241,9 @@ En esta sección se puede incluir información como:
 
 En resumen, la sección "agradecimientos" es una excelente manera de agradecer a las personas o instituciones que ayudaron en el desarrollo del proyecto. Esta sección también puede ser útil para dar crédito a los recursos o proyectos relacionados que fueron útiles durante el desarrollo.
 
-- [Icon Libraries](https://iconos8.es/)
+- [Iconos 8](https://iconos8.es/)
+- [Fontawesome](https://fontawesome.com/)
+- [AnimatiSS](https://xsgames.co/)
 - [Google Font Libraries](https://fonts.google.com/knowledge)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
