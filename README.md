@@ -185,6 +185,7 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 ###### Miercoles 22, Febrero 2023
 
 - [ ] Menú Hamburguesa
+- [ ] Poner el footer al final de la página, aunque tenga poco contenido el resto de la web.
 
 #### Day Ten
 

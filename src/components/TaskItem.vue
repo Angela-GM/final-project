@@ -5,6 +5,17 @@
       props.task.is_complete ? 'bakcground-color-green' : 'bakcground-color-red'
     "
   >
+    <!-- Temporizador de tareas -->
+    <div>
+      <div>{{ task.name }}</div>
+      <div>Time elapsed: {{ formatTime(time) }}</div>
+      <button v-if="!started" @click="startTimer">
+        <i class="fa-solid fa-play"></i>
+      </button>
+      <button v-if="started" @click="stopTimer">
+        <i class="fa-solid fa-stop"></i>
+      </button>
+    </div>
     <h3 :class="props.task.is_complete ? 'task-complete' : 'task-no-complete'">
       {{ task.title }}
     </h3>
@@ -127,6 +138,37 @@ const showInput = () => {
   inputContainer.value = !inputContainer.value;
   currentTaskTitle.value = props.task.title;
   currentTaskDescription.value = props.task.description;
+};
+
+// variables para el temporizador
+
+const time = ref(0);
+const timer = ref(null);
+const started = ref(false);
+
+// Funcion para empezar la cuenta
+const startTimer = () => {
+  started.value = true;
+  timer.value = setInterval(() => {
+    time.value += 1;
+  }, 1000);
+};
+
+// Funcion para parar la cuenta
+const stopTimer = () => {
+  clearInterval(timer.value);
+  started.value = false;
+  time.value = props.task.time_task;
+};
+
+// Transformar tiempo en hora, minutos y segundos
+const formatTime = (time) => {
+  const hours = Math.floor(time / 3600);
+  const minutes = Math.floor((time % 3600) / 60);
+  const seconds = time % 60;
+  return `${hours.toString().padStart(2, "0")}:${minutes
+    .toString()
+    .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 };
 
 //funcion con validadion+ envio de datos y evento mediante emit
