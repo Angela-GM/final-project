@@ -22,9 +22,11 @@
   /* outline: 1px solid #0000ff; */
 }
 
+
 body {
   font-family: var(--fontFamily);
   font-size: var(--fontSize-sm);
+
 }
 /* h1 {
   text-align: center;
@@ -431,4 +433,31 @@ span {
 
 .margin-top{
   margin-top: 2em;
+}
+
+/* Footer */
+footer {
+  background-color:#c8ede6;
+  padding: 3em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+footer ul {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  margin-bottom: 1em;
+}
+
+footer ul li a {
+  color: black;
+
+}
+
+footer small {
+  font-size: 0.7rem;
 }
