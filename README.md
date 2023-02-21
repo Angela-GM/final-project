@@ -180,13 +180,13 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 ###### Miercoles 22, Febrero 2023
 
-- [ ] Tarea
+- [ ] Menú Hamburguesa
 
 #### Day Ten
 
 ###### Jueves 23, Febrero 2023
 
-- [ ] Tarea
+- [ ] Responsive (Media Queries)
 
 #### Day Eleven
 
