@@ -93,9 +93,11 @@
     <div class="modal-container modal-register" v-if="showModalConfirmation">
       <h1>Welcome to TaskTime</h1>
       <p>Check your email account to complete the registration</p>
-      <button @click="redirectHome">
-        <img src="https://img.icons8.com/color/48/null/checked--v1.png" />
-      </button>
+      <p></p>
+      <!-- <img src="https://img.icons8.com/color/48/null/checked--v1.png" /> -->
+      <div class="container-btn-close">
+        <button class="button" @click="redirectHome">Close</button>
+      </div>
     </div>
   </transition>
 </template>

@@ -103,8 +103,13 @@
     <div class="modal-container" v-if="showModal">
       <h1>Are you sure you want to delete:</h1>
       <p>{{ task.title }}</p>
-      <button @click="deleteTask">Eliminar</button>
-      <button @click="changeShowModal">Cerrar</button>
+
+      <div class="buttons-modal">
+        <button id="color-red" class="button" @click="deleteTask">
+          Eliminar
+        </button>
+        <button class="button" @click="changeShowModal">Cancelar</button>
+      </div>
     </div>
   </transition>
 </template>

@@ -168,6 +168,13 @@ span {
 
 
 /* SignUp Component */
+.container-btn-close {
+  /* display: flex;
+  justify-content: center; */
+  width: 30%;
+  margin: auto;
+
+}
 
 
 
@@ -348,6 +355,20 @@ span {
 .container-card-task:last-child {
   margin-bottom: 2em;
 }
+
+.buttons-modal {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  width: 60%;
+  margin: auto;
+  margin-top: 2em;
+}
+
+#color-red {
+  background-color: #f76c6c;
+}
+
 /* estilos para modal */
 .modal-overlay {
   position: fixed;
@@ -371,7 +392,7 @@ span {
 
 .modal-register button {
   border: none;
-  background: none;
+  /* background: none; */
   margin-top: 2em;
 }
 
@@ -471,6 +492,8 @@ footer {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  /* position: sticky;
+  bottom: 0; */
 
 
 
