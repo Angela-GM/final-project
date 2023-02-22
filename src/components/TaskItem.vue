@@ -15,14 +15,15 @@
     <!-- Temporizador de tareas -->
     <div class="temporizador" v-show="!props.task.is_complete">
       <!-- <div>{{ task.name }}</div> -->
-      <p id="timer">{{ formatTime(time) }}</p>
-
-      <button v-if="!started" @click="startTimer">
-        <i class="fa-solid fa-play"></i>
-      </button>
-      <button v-if="started" @click="stopTimer">
-        <i class="fa-solid fa-stop"></i>
-      </button>
+      <p id="timer">
+        {{ formatTime(time) }}
+        <button v-if="!started" @click="startTimer">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button v-if="started" @click="stopTimer">
+          <i class="fa-solid fa-stop"></i>
+        </button>
+      </p>
     </div>
 
     <div>

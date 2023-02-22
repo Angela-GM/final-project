@@ -3,7 +3,7 @@
 
   <!-- Formulario para editar perfil  -->
 
-  <div class="container">
+  <div class="container" id="container-edit-profile">
     <form>
       <!-- imagen perfil -->
       <div>
@@ -67,6 +67,7 @@
       <button class="button" @click.prevent="editProfile">Save changes</button>
     </form>
   </div>
+  <Footer />
 </template>
 
 <script setup>
@@ -76,6 +77,7 @@ import { onMounted, ref, toRefs } from "vue";
 import { useUserStore } from "../stores/user";
 import Nav from "../components/Nav.vue";
 import { useRouter } from "vue-router";
+import Footer from "./Footer.vue";
 
 // declarar variable de la UserStore
 const userStore = useUserStore();

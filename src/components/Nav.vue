@@ -27,7 +27,8 @@
         />
       </li>
       <li class="menu-item">
-        <p>Welcome, {{ userEmail }}</p>
+        <p v-if="!username">Welcome, {{ userEmail }}</p>
+        <p v-else>Welcome, {{ username }}</p>
       </li>
       <li class="menu-item">
         <a href="#" class="menu-link">
@@ -73,6 +74,7 @@ const userStore = useUserStore();
 // constant that calls user email from the useUSerStore
 const userEmail = getUser.email;
 const avatar_url = ref(null);
+const username = ref(null);
 
 // Ejecutar la funcion getProfile al cargar la página
 onMounted(() => {
@@ -83,6 +85,7 @@ onMounted(() => {
 async function getProfile() {
   await userStore.fetchUser();
   avatar_url.value = userStore.profile.avatar_url;
+  username.value = userStore.profile.username;
 }
 
 // async function that calls the signOut method from the useUserStore and pushes the user back to the Auth view.
@@ -109,55 +112,4 @@ const toggleMenu = () => {
 };
 </script>
 
-<style>
-.nav-bar {
-  background-color: #c8ede6;
-  padding: 20px;
-  display: block;
-  /* color: azure; */
-  font-size: 1.5em;
-  width: 100%;
-}
-
-.menu {
-  list-style: none;
-  background: hsl(169, 51%, 86%, 1);
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  top: 50px;
-  z-index: 1;
-  margin-left: -100%;
-  transition: all 0.5s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.menu-link {
-  /* background: #c8ede6; */
-  padding-left: 50px;
-  display: block;
-  padding: 20px;
-  color: #fff;
-  font-size: 1.2em;
-  text-decoration: none;
-}
-
-.menu-link:hover {
-  /* background: #5adaf1; */
-}
-
-.mostrar {
-  margin-left: 0;
-}
-
-.fas {
-  cursor: pointer;
-}
-.nav-item {
-  z-index: 2;
-  color: white;
-}
-</style>
+<style></style>

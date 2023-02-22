@@ -181,11 +181,12 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 ###### Miercoles 22, Febrero 2023
 
-- [ ] Menú Hamburguesa
+- [x] Menú Hamburguesa
 - [x] Maquetar Modal de eliminar tarea
 - [x] Poner el footer al final de la página, aunque tenga poco contenido el resto de la web.
-- [ ] Cambiar Favicon
-- [ ] Maquetar el Navbar
+- [x] Cambiar Favicon
+- [x] Maquetar el Navbar
+- [x] Hacer el responsive (Media Queries)
 - [ ] Maquetar input de seleccionar archivo en Edit Profile (opcional)
 - [ ] Hacer que el tiempo de cada tarea se quede registrado (conectar con supabase y crear columna time_task en la tabla tasks) (opcional)
 
@@ -193,7 +194,7 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 ###### Jueves 23, Febrero 2023
 
-- [ ] Responsive (Media Queries)
+- [ ] Añadir botón para desplazar arriba en la pantalla de tareas
 
 #### Day Eleven
 
