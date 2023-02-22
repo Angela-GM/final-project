@@ -1,45 +1,55 @@
 <template>
-  <nav>
-    <img
-      id="logo"
-      src="https://img.icons8.com/clouds/300/null/todo-list.png"
-      alt="logo imagen"
-    />
-    <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link" />
-    <!-- <router-link to="/"> Home </router-link> -->
+  <!-- Menu Hamburguesa -->
+  <span class="nav-bar" @click="toggleMenu">
+    <i class="fa-solid fa-bars" id="cruz" :class="{ 'fa-times': visible }"></i>
+  </span>
 
-    <ul>
-      <!-- <li>
-        <router-link to="/">Task Manager</router-link>
-      </li> -->
-
+  <nav class="main-nav">
+    <ul class="menu" :class="{ mostrar: visible }">
       <li>
-        <router-link to="/account">Your Account</router-link>
+        <!-- logo -->
+        <div class="logo">
+          <router-link to="/"
+            ><img
+              class="logo"
+              id="logo"
+              src="https://img.icons8.com/clouds/300/null/todo-list.png"
+              alt="logo imagen"
+            />
+          </router-link>
+        </div>
+      </li>
+      <li class="menu-item">
+        <PersonalRouter
+          :route="route"
+          :buttonText="buttonText"
+          class="logo-link"
+        />
+      </li>
+      <li class="menu-item">
+        <p>Welcome, {{ userEmail }}</p>
+      </li>
+      <li class="menu-item">
+        <a href="#" class="menu-link">
+          <router-link to="/account">
+            <img
+              id="img-nav"
+              :src="
+                avatar_url
+                  ? avatar_url
+                  : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'
+              "
+              alt="Profile picture"
+            />
+          </router-link>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="#" class="menu-link">
+          <button @click.prevent="signOut" class="button">Log out</button>
+        </a>
       </li>
     </ul>
-
-    <div>
-      <ul class="log-out">
-        <li>
-          <!-- <img
-            class="profile-img"
-            id="img-nav"
-            :src="
-              avatar_url
-                ? avatar_url
-                : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'
-            "
-            alt="Profile picture"
-          /> -->
-        </li>
-        <li class="log-out-welcome">
-          <p>Welcome, {{ userEmail }}</p>
-        </li>
-        <li>
-          <button @click.prevent="signOut" class="button">Log out</button>
-        </li>
-      </ul>
-    </div>
   </nav>
 </template>
 
@@ -90,6 +100,64 @@ const signOut = async () => {
     throw error;
   }
 };
+
+// menu hamburguesa
+
+let visible = ref(false);
+const toggleMenu = () => {
+  visible.value = !visible.value;
+};
 </script>
 
-<style></style>
+<style>
+.nav-bar {
+  background-color: #c8ede6;
+  padding: 20px;
+  display: block;
+  /* color: azure; */
+  font-size: 1.5em;
+  width: 100%;
+}
+
+.menu {
+  list-style: none;
+  background: hsl(169, 51%, 86%, 1);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  z-index: 1;
+  margin-left: -100%;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-link {
+  /* background: #c8ede6; */
+  padding-left: 50px;
+  display: block;
+  padding: 20px;
+  color: #fff;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.menu-link:hover {
+  /* background: #5adaf1; */
+}
+
+.mostrar {
+  margin-left: 0;
+}
+
+.fas {
+  cursor: pointer;
+}
+.nav-item {
+  z-index: 2;
+  color: white;
+}
+</style>

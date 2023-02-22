@@ -63,7 +63,8 @@ a:hover {
 
 /* Nav Component */
 #img-nav {
-  width: 50px;
+  width: 45px;
+  border-radius: 50%;
 }
 #logo {
   width: 80px;
@@ -77,11 +78,11 @@ a:hover {
 
 nav {
   font-size: 0.8rem;
-  padding: 0.3em 0;
+  padding: 0em 3em;
   background-color: #c8ede6;
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   color: black;
 }
@@ -93,6 +94,18 @@ nav ul {
   flex-direction: column;
   align-items: center;
 }
+
+.navbar {
+  display: none;
+  background-color: #c8ede6;
+}
+.nav-items {
+  display:flex;
+  flex-direction: row;
+  gap:3em;
+  align-items: center;
+}
+
 
 
 
@@ -526,4 +539,48 @@ footer ul li a {
 
 footer small {
   font-size: 0.7rem;
+}
+
+/* RESPONSIVE */
+   /* ========================================================================= / */
+ 
+/* / Móviles en horizontal o tablets en vertical */
+   /* ------------------------------------------------------------------------- / */
+@media (min-width: 768px) {
+  /* Menu hamburguesa */
+
+
+
+
+ }
+ 
+/* / Tablets en horizonal y escritorios normales */
+   /* ------------------------------------------------------------------------- / */
+   @media only screen and (min-width: 1024px) {
+    .nav-bar {
+      display: none;
+    }
+  
+    .menu-link {
+      background: #c8ede6;
+    }
+  
+    .menu {
+      margin-left: 0;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      position: initial;
+      padding: 0 3rem;
+    }
+  }
+ 
+/* / Escritorios muy anchos */
+   /* ------------------------------------------------------------------------- */ 
+@media (min-width: 1200px) { 
+
+
+
 }

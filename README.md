@@ -182,8 +182,8 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 ###### Miercoles 22, Febrero 2023
 
 - [ ] Menú Hamburguesa
-- [ ] Maquetar Modal de eliminar tarea
-- [ ] Poner el footer al final de la página, aunque tenga poco contenido el resto de la web.
+- [x] Maquetar Modal de eliminar tarea
+- [x] Poner el footer al final de la página, aunque tenga poco contenido el resto de la web.
 - [ ] Cambiar Favicon
 - [ ] Maquetar el Navbar
 - [ ] Maquetar input de seleccionar archivo en Edit Profile (opcional)
