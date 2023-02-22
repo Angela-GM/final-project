@@ -55,7 +55,16 @@ a:hover {
   color: rgb(223, 199, 199);
 }
 
+/* General Styling for content + footer element */
+
+.wrapper {
+  min-height: calc(100vh - 60px);
+}
+
 /* Nav Component */
+#img-nav {
+  width: 50px;
+}
 #logo {
   width: 80px;
 }

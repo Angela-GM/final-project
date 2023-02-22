@@ -17,9 +17,9 @@
         @edit-child="editTaskSupabase"
       />
     </div>
-    <!-- Footer component -->
-    <Footer />
   </div>
+  <!-- Footer component -->
+  <Footer />
 </template>
 
 <script setup>
@@ -75,7 +75,10 @@ const editTaskSupabase = async (editTaskObject) => {
 };
 </script>
 
-<style></style>
+<style>
+.wrapper {
+}
+</style>
 
 <!-- 
 **Hints**

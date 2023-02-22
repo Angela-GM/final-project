@@ -1,52 +1,54 @@
 <template>
-  <Nav />
+  <div class="wrapper">
+    <Nav />
 
-  <div class="profile-card">
-    <!-- imagen de perfil -->
-    <div>
-      <img
-        class="profile-img"
-        :src="
-          avatar_url
-            ? avatar_url
-            : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'
-        "
-        alt="Profile picture"
-      />
-    </div>
-    <!-- datos personales -->
-    <div class="profile-data">
+    <div class="profile-card">
+      <!-- imagen de perfil -->
       <div>
         <img
-          class="icon-img"
-          src="https://img.icons8.com/windows/32/000000/username.png"
+          class="profile-img"
+          :src="
+            avatar_url
+              ? avatar_url
+              : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'
+          "
+          alt="Profile picture"
         />
-        <p>{{ username }}</p>
       </div>
-      <div>
-        <!-- Name -->
-        <img
-          class="icon-img"
-          src="https://img.icons8.com/windows/32/000000/name-tag-woman-horizontal.png"
-        />
+      <!-- datos personales -->
+      <div class="profile-data">
+        <div>
+          <img
+            class="icon-img"
+            src="https://img.icons8.com/windows/32/000000/username.png"
+          />
+          <p>{{ username }}</p>
+        </div>
+        <div>
+          <!-- Name -->
+          <img
+            class="icon-img"
+            src="https://img.icons8.com/windows/32/000000/name-tag-woman-horizontal.png"
+          />
 
-        <p>{{ name }}</p>
+          <p>{{ name }}</p>
+        </div>
+
+        <div>
+          <!-- Website -->
+          <img
+            class="icon-img"
+            src="https://img.icons8.com/material-outlined/24/000000/internet.png"
+          />
+          <p>{{ website }}</p>
+        </div>
       </div>
 
-      <div>
-        <!-- Website -->
-        <img
-          class="icon-img"
-          src="https://img.icons8.com/material-outlined/24/000000/internet.png"
-        />
-        <p>{{ website }}</p>
+      <div class="center-btn">
+        <router-link to="/editprofile"
+          ><div class="button btn-edit-profile">Edit</div></router-link
+        >
       </div>
-    </div>
-
-    <div class="center-btn">
-      <router-link to="/editprofile"
-        ><div class="button btn-edit-profile">Edit</div></router-link
-      >
     </div>
   </div>
 
