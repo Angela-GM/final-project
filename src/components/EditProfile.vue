@@ -3,19 +3,25 @@
 
   <!-- Formulario para editar perfil  -->
 
-  <div class="container" id="container-edit-profile">
+  <div class="container wrapper" id="container-edit-profile">
     <form>
       <!-- imagen perfil -->
-      <div>
-        <img
-          class="profile-img"
-          :src="
-            avatar_url
-              ? avatar_url
-              : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'
-          "
-          alt="Profile picture"
-        />
+
+      <div class="container-avatar-loading">
+        <div class="container-avatar">
+          <div v-if="loading" class="loader"></div>
+          <img
+            v-if="!loading"
+            class="profile-img"
+            :src="
+              avatar_url
+                ? avatar_url
+                : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'
+            "
+            alt="Profile picture"
+          />
+        </div>
+
         <!-- input para subir imagen avatar nueva -->
 
         <input
@@ -147,6 +153,7 @@ const uploadAvatar = async (evt) => {
     const file = files.value[0];
     const fileExt = file.name.split(".").pop();
     const filePath = `${Math.random()}.${fileExt}`;
+    loading.value = !loading.value;
 
     let { error: uploadError } = await supabase.storage
       .from("avatars")
@@ -161,6 +168,7 @@ const uploadAvatar = async (evt) => {
   } catch (error) {
     alert(error.message);
   } finally {
+    loading.value = !loading.value;
     uploading.value = false;
   }
 };

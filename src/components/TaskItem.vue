@@ -14,7 +14,7 @@
 
     <!-- Temporizador de tareas -->
     <div class="temporizador" v-show="!props.task.is_complete">
-      <div>Time total:</div>
+      <div>Total time:</div>
       <p id="timer">
         {{ formatTime(time) }}
         <button v-if="!started" @click="startTimer(id, time)">
@@ -25,6 +25,14 @@
         </button>
       </p>
     </div>
+    <!-- Tiempo al completar la tarea -->
+    <!-- Temporizador de tareas -->
+    <div class="temporizador" v-show="props.task.is_complete">
+      <div>Total time:</div>
+      <p id="timer">
+        {{ formatTime(time) }}
+      </p>
+    </div>
 
     <div>
       <!-- Boton de eliminar tarea -->
@@ -33,7 +41,7 @@
       </button>
 
       <!-- Boton de completar tarea cuando se está editando una tarea-->
-      <button v-if="inputContainer">
+      <button v-if="inputContainer || started">
         <img
           id="disable-img2"
           class="disable-img"
@@ -114,6 +122,7 @@
 import { ref } from "vue";
 import { useTaskStore } from "../stores/task";
 import { supabase } from "../supabase";
+
 //Definir emits para pasar lógica y eventis hacia componentes padres
 
 const emit = defineEmits(["childComplete", "editChild"]);
@@ -159,12 +168,6 @@ const startTimer = async () => {
     updateTimeTotal(id.value, time.value);
   }, 1000);
 };
-// const startTimer = () => {
-//   started.value = true;
-//   timer.value = setInterval(() => {
-//     time.value += 1;
-//   }, 1000);
-// };
 
 // Funcion para parar la cuenta
 const stopTimer = () => {
