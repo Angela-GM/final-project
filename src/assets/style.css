@@ -58,7 +58,8 @@ a:hover {
   bottom: 1rem;
   right: 1rem;
   /* transition: visibility 0s, opacity 0.5s ease; */
-  font-size: 4rem;
+  display: none;
+  font-size: 2rem;
   border-radius: 50%;
   border: none;
   background-color:transparent;
@@ -583,6 +584,10 @@ footer small {
 /* / Móviles en horizontal o tablets en vertical */
 /* ------------------------------------------------------------------------- / */
 @media only screen and (min-width: 768px) {
+  #up {
+    font-size: 3rem; 
+    display: block;
+  }
   /* Menu Hamburguesa */
   nav {
     font-size: 0.8rem;
@@ -634,6 +639,9 @@ footer small {
 /* / Tablets en horizonal y escritorios normales */
 /* ------------------------------------------------------------------------- / */
 @media only screen and (min-width: 1024px) {
+  #up {
+    font-size: 3.1rem; 
+  }
   /* SinIn */
   div.container {
     width: 70%;
@@ -667,6 +675,9 @@ footer small {
 /* / Escritorios muy anchos */
 /* ------------------------------------------------------------------------- */
 @media only screen and (min-width: 1440px) {
+  #up {
+    font-size: 4rem; 
+  }
   /* NewTask */
 
   .container-new-task h1 {
