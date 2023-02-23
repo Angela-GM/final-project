@@ -197,12 +197,13 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 - [x] Hacer que el tiempo de cada tarea se quede registrado (conectar con supabase y crear columna time_task en la tabla tasks)
 - [x] Hacer que al completar la tarea se pueda ver el tiempo total invertido.
 - [x] Animación loader al cargar la foto de perfil
-- [ ] Revisar el Responsive y pulir algunas cosas
 
 #### Day Eleven
 
 ###### Viernes 24, Febrero 2023
 
+- [ ] Revisar el Responsive y pulir algunas cosas
+- [ ] Revidar y limpiar código
 - [ ] Preparar presentación
 - [ ] Presentación del proyecto
 
