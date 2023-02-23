@@ -14,6 +14,9 @@
       />
     </div>
   </div>
+
+  <toUp />
+
   <!-- Footer component -->
   <Footer />
 </template>
@@ -26,6 +29,7 @@ import Nav from "../components/Nav.vue";
 import NewTask from "../components/NewTask.vue";
 import TaskItem from "../components/TaskItem.vue";
 import Footer from "../components/Footer.vue";
+import toUp from "../components/toUp.vue";
 
 const taskStore = useTaskStore();
 
@@ -39,6 +43,7 @@ const getTasks = async () => {
 
 getTasks();
 onUpdated(() => {
+  // console.log("estoy en onupdated");
   getTasks();
 });
 
@@ -71,10 +76,7 @@ const editTaskSupabase = async (editTaskObject) => {
 };
 </script>
 
-<style>
-.wrapper {
-}
-</style>
+<style></style>
 
 <!-- 
 **Hints**

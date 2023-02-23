@@ -194,7 +194,7 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 ###### Jueves 23, Febrero 2023
 
-- [ ] Añadir botón para desplazar arriba en la pantalla de tareas
+- [x] Añadir botón para desplazar arriba en la pantalla de tareas
 
 #### Day Eleven
 

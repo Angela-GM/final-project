@@ -17,7 +17,7 @@
       <!-- <div>{{ task.name }}</div> -->
       <p id="timer">
         {{ formatTime(time) }}
-        <button v-if="!started" @click="startTimer">
+        <button v-if="!started" @click="startTimer(id, time)">
           <i class="fa-solid fa-play"></i>
         </button>
         <button v-if="started" @click="stopTimer">
@@ -84,11 +84,6 @@
         maxlength="500"
       ></textarea>
 
-      <!-- <input
-        type="text"
-        v-model="currentTaskDescription"
-        placeholder="Insert description..."
-      /> -->
       <button class="button" id="btn-update-task" @click="editTask">
         Update task
       </button>
@@ -150,17 +145,26 @@ const showInput = () => {
 
 // variables para el temporizador
 
-const time = ref(0);
+const time = ref(props.task.time_total); //tiempo total que se suma a la tabla
 const timer = ref(null);
 const started = ref(false);
+const id = ref(props.task.id);
 
 // Funcion para empezar la cuenta
-const startTimer = () => {
+
+const startTimer = async () => {
   started.value = true;
   timer.value = setInterval(() => {
     time.value += 1;
+    updateTimeTotal(id.value, time.value);
   }, 1000);
 };
+// const startTimer = () => {
+//   started.value = true;
+//   timer.value = setInterval(() => {
+//     time.value += 1;
+//   }, 1000);
+// };
 
 // Funcion para parar la cuenta
 const stopTimer = () => {
@@ -176,6 +180,23 @@ const formatTime = (time) => {
   return `${hours.toString().padStart(2, "0")}:${minutes
     .toString()
     .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+};
+
+// Función para actualizar el valor de time_total en la tabla tasks
+const updateTimeTotal = async (id, time) => {
+  const { data, error } = await supabase
+    .from("tasks")
+    .update({ time_total: time })
+    .eq("id", id);
+  // console.log(time);
+
+  if (error) {
+    console.error(error);
+    return;
+  }
+  // console.log(
+  //   `Se ha actualizado el valor de time_total para la tarea con id ${id}`
+  // );
 };
 
 //funcion con validadion+ envio de datos y evento mediante emit

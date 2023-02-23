@@ -52,6 +52,20 @@ a:hover {
 }
 
 /* General Styling for content + footer element */
+/* To up */
+#up {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  /* transition: visibility 0s, opacity 0.5s ease; */
+  font-size: 4rem;
+  border-radius: 50%;
+  border: none;
+  background-color:transparent;
+  cursor: pointer;
+  color:var(--colorBlack);
+
+}
 
 .wrapper {
   min-height: calc(100vh - 60px);
