@@ -14,7 +14,7 @@
 
     <!-- Temporizador de tareas -->
     <div class="temporizador" v-show="!props.task.is_complete">
-      <!-- <div>{{ task.name }}</div> -->
+      <div>Time total:</div>
       <p id="timer">
         {{ formatTime(time) }}
         <button v-if="!started" @click="startTimer(id, time)">

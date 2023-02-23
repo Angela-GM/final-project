@@ -17,7 +17,7 @@ export const useTaskStore = defineStore("tasks", () => {
   };
   // añadir tareas de supabase
   const addTask = async (title, description) => {
-    console.log(useUserStore().user.id);
+    // console.log(useUserStore().user.id);
     const { data, error } = await supabase.from("tasks").insert([
       {
         user_id: useUserStore().user.id,

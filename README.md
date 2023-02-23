@@ -188,13 +188,15 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 - [x] Maquetar el Navbar
 - [x] Hacer el responsive (Media Queries)
 - [ ] Maquetar input de seleccionar archivo en Edit Profile (opcional)
-- [ ] Hacer que el tiempo de cada tarea se quede registrado (conectar con supabase y crear columna time_task en la tabla tasks) (opcional)
 
 #### Day Ten
 
 ###### Jueves 23, Febrero 2023
 
 - [x] Añadir botón para desplazar arriba en la pantalla de tareas
+- [x] Hacer que el tiempo de cada tarea se quede registrado (conectar con supabase y crear columna time_task en la tabla tasks)
+- [ ] Hacer que al completar la tarea se pueda ver el tiempo total invertido.
+- [ ] Revisar el Responsive y pulir algunas cosas
 
 #### Day Eleven
 

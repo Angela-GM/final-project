@@ -379,6 +379,12 @@ input,
   display: flex;
   flex-direction: column;
 }
+.temporizador>div {
+  flex-direction: column;
+  text-align: left;
+
+}
+
 
 .temporizador button {
   position: absolute;
