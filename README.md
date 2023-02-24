@@ -191,8 +191,8 @@ El propósito de este proyecto es consolidar los conocimientos ya adquiridos dur
 - [x] Revisar el Responsive y pulir algunas cosas
 - [x] Revidar y limpiar código
 - [x] Terminar el Readme
-- [ ] Preparar presentación
-- [ ] Presentación del proyecto
+- [x] Preparar presentación
+- [x] Presentación del proyecto
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -208,13 +208,11 @@ Project Link: [GitHub Project](https://github.com/Angela-GM/midterm-ironhack)
 
 Web del proyecto: [Vercel](https://midterm-ironhack-red.vercel.app/)
 
-Presentation Link: [Insert here your presentation link](insert-link-here)
-
 Your Name - [@your_twitter](https://twitter.com/your_username)
 
 Project Link: [https://github.com/Angela-GM/final-project](https://github.com/Angela-GM/final-project)
 
-Presentation Link: [Insert here your presentation link](insert-link-here)
+Presentation Link: [Insert here your presentation link](https://slides.com/d/1P3X6dc/live)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
