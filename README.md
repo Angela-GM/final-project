@@ -80,33 +80,20 @@ El propósito de este proyecto es consolidar los conocimientos ya adquiridos dur
 
 ### Construido Con
 
-- [Vue.js 3] (https://vuejs.org/)
+- [Vue.js 3](https://vuejs.org/)
 - HTML5
 - CSS3
 - JavaScript ES6
+- [Supabase](https://supabase.com/)
 - [Vercel](https://vercel.com/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Git](https://git-scm.com/)
-
-La sección "construido con" en un archivo README es una sección que proporciona información sobre las tecnologías y herramientas utilizadas para desarrollar el proyecto.
-
-En esta sección se puede incluir información como:
-
-- Lenguajes de programación utilizados
-- Frameworks y bibliotecas utilizadas
-- Herramientas de desarrollo (IDE, control de versiones, etc)
-- Servicios en la nube utilizados (si corresponde)
-- Otros recursos o tecnologías relacionadas con el proyecto.
-
-En resumen, la sección "construido con" es una excelente manera de brindar a los usuarios y contribuidores una compresión de las tecnologías y herramientas utilizadas para desarrollar el proyecto, esto ayuda a entender mejor el proyecto y a los desarrolladores a contribuir de manera efectiva.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Roadmap
 
 #### Backlog
-
-- [ ] Ej - Tarea a completar y mover a su respectivo dia de ejecucion
 
 #### Day One
 
@@ -203,7 +190,7 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 - [x] Revisar el Responsive y pulir algunas cosas
 - [x] Revidar y limpiar código
-- [ ] Terminar el Readme
+- [x] Terminar el Readme
 - [ ] Preparar presentación
 - [ ] Presentación del proyecto
 
@@ -213,18 +200,17 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 ## Acerca
 
-La sección "sobre mí" en un archivo README es una sección que proporciona información sobre el desarrollador o equipo detrás del proyecto.
+Angela Garcia Muñoz - [LinkedIn](https://www.linkedin.com/in/angelagarciam82/)
 
-En esta sección se puede incluir información como:
+Correo electrónico: [angelagm0112@gmail.com](mailto:angelagm0112@gmail.com)
 
-- Nombre y datos de contacto del desarrollador o equipo.
-- Información sobre experiencia laboral o académica relacionada con el proyecto.
-- Enlaces a perfiles en redes sociales o sitios web personales.
-- Otra información relevante que el desarrollador o equipo desee compartir.
+Project Link: [GitHub Project](https://github.com/Angela-GM/midterm-ironhack)
 
-En resumen, la sección "sobre mí" es una excelente manera de brindar a los usuarios y contribuidores una idea de quién está detrás del proyecto y cómo pueden ponerse en contacto con ellos si tienen preguntas o comentarios. Es una buena manera de establecer una conexión con la comunidad de desarrolladores y una forma de mostrar la transparencia en el proyecto.
+Web del proyecto: [Vercel](https://midterm-ironhack-red.vercel.app/)
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Presentation Link: [Insert here your presentation link](insert-link-here)
+
+Your Name - [@your_twitter](https://twitter.com/your_username)
 
 Project Link: [https://github.com/Angela-GM/final-project](https://github.com/Angela-GM/final-project)
 
@@ -236,15 +222,11 @@ Presentation Link: [Insert here your presentation link](insert-link-here)
 
 ## agradecimientos
 
-La sección "agradecimientos" en un archivo README es una sección que proporciona reconocimiento a las personas o instituciones que ayudaron en el desarrollo del proyecto.
+Quiero dar las gracias a Aleix, Diego y Jarko, los 3 profesores que nos han ido guiando y ayudando para poder terminar el proyecto.
 
-En esta sección se puede incluir información como:
+A los compañeros de clase porque siempre están dispuestos a ayudar.
 
-- Agradecimientos específicos a personas que ayudaron en el desarrollo del proyecto.
-- Agradecimientos a instituciones o organizaciones que proporcionaron apoyo financiero o recursos.
-- Enlaces a proyectos o recursos relacionados que fueron útiles para el desarrollo del proyecto.
-
-En resumen, la sección "agradecimientos" es una excelente manera de agradecer a las personas o instituciones que ayudaron en el desarrollo del proyecto. Esta sección también puede ser útil para dar crédito a los recursos o proyectos relacionados que fueron útiles durante el desarrollo.
+Y al SOC, ya que gracias a ellos he podido permitirme cursar el bootcamp en IronHack.
 
 - [Iconos 8](https://iconos8.es/)
 - [Fontawesome](https://fontawesome.com/)
@@ -255,7 +237,11 @@ En resumen, la sección "agradecimientos" es una excelente manera de agradecer a
 
 ## Desafío Técnico
 
-La sección "desafío técnico" aunque no es convencional en un proyecto profesional, en nuestro curso dependemos de esta sección en un archivo README para proporcionar información sobre los desafíos técnicos que se enfrentaron durante el desarrollo del proyecto.
+Este proyecto ha sido un verdadero desafío para mí ya que he adquirido los conocimientos necesarios en una sola semana. Durante el desarrollo del proyecto, he aprendido cómo conectar con una base de datos, cómo obtener los datos necesarios para utilizarlos en la aplicación, y cómo actualizar o guardar nuevos datos.
+
+Además, con este proyecto ha sido la primera vez que he construido una aplicación completamente utilizando un framework, en este caso Vue.js 3. Estoy orgullosa de haber superado el desafío y de haber aprendido tantas cosas nuevas en el proceso.
+
+<!-- La sección "desafío técnico" aunque no es convencional en un proyecto profesional, en nuestro curso dependemos de esta sección en un archivo README para proporcionar información sobre los desafíos técnicos que se enfrentaron durante el desarrollo del proyecto.
 
 En esta sección se puede incluir información como:
 
@@ -264,7 +250,7 @@ En esta sección se puede incluir información como:
 - Aspectos del proyecto que aún son un desafío o que requieren mejora continua.
 - Recomendaciones para futuros desarrolladores que trabajen en el proyecto.
 
-En resumen, la sección "desafío técnico" es una excelente manera de brindar a los usuarios y contribuidores una idea de los desafíos técnicos que se enfrentaron durante el desarrollo del proyecto, y cómo se abordaron. Esta sección también puede ser útil para futuros desarrolladores que trabajen en el proyecto, ya que les brinda información valiosa sobre problemas potenciales y soluciones para superarlos.
+En resumen, la sección "desafío técnico" es una excelente manera de brindar a los usuarios y contribuidores una idea de los desafíos técnicos que se enfrentaron durante el desarrollo del proyecto, y cómo se abordaron. Esta sección también puede ser útil para futuros desarrolladores que trabajen en el proyecto, ya que les brinda información valiosa sobre problemas potenciales y soluciones para superarlos. -->
 
 ## Grande Error
 
