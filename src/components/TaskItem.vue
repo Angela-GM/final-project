@@ -124,7 +124,6 @@ import { useTaskStore } from "../stores/task";
 import { supabase } from "../supabase";
 
 //Definir emits para pasar lógica y eventis hacia componentes padres
-
 const emit = defineEmits(["childComplete", "editChild"]);
 
 //funcion para completar tarea que se encarga de enviar la info al padre
@@ -203,7 +202,6 @@ const updateTimeTotal = async (id, time) => {
 };
 
 //funcion con validadion+ envio de datos y evento mediante emit
-
 const editTask = () => {
   if (
     currentTaskTitle.value.length === 0 ||

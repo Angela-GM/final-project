@@ -2,11 +2,9 @@
   <Nav />
 
   <!-- Formulario para editar perfil  -->
-
   <div class="container wrapper" id="container-edit-profile">
     <form>
       <!-- imagen perfil -->
-
       <div class="container-avatar-loading">
         <div class="container-avatar">
           <div v-if="loading" class="loader"></div>
@@ -23,7 +21,6 @@
         </div>
 
         <!-- input para subir imagen avatar nueva -->
-
         <input
           id="input-file"
           type="file"

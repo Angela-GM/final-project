@@ -59,12 +59,12 @@
 
     <span>
       Dont have an account?
-
       <PersonalRouter
         :route="route"
         :buttonText="buttonText"
         class="sign-up-link"
-    /></span>
+      />
+    </span>
   </div>
 </template>
 

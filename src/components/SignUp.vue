@@ -94,7 +94,6 @@
       <h1>Welcome to TaskTime</h1>
       <p>Check your email account to complete the registration</p>
       <p></p>
-      <!-- <img src="https://img.icons8.com/color/48/null/checked--v1.png" /> -->
       <div class="container-btn-close">
         <button class="button" @click="redirectHome">Close</button>
       </div>
@@ -152,7 +151,6 @@ const signUp = async () => {
       //debe cambiar el valor de una variable de false a true
       showModalConfirmation.value = true;
       // console.log(showModalConfirmation.value);
-
       // redirects user to the homeView
       // redirect.push({ path: "/auth/login" });
     } catch (error) {

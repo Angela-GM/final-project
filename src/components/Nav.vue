@@ -105,7 +105,6 @@ const signOut = async () => {
 };
 
 // menu hamburguesa
-
 let visible = ref(false);
 const toggleMenu = () => {
   visible.value = !visible.value;
