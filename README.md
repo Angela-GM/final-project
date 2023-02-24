@@ -25,7 +25,7 @@ Tener un archivo README.md bien estructurado y bien documentado también puede s
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <!-- <img src="./resources/images/readMe/wu.png" alt="Logo" width="80" height="80"> -->
+  <img src="https://img.icons8.com/clouds/300/null/todo-list.png" alt="Logo" width="80" height="80">
   <h3 align="center">Final Project</h3>
   <a href="https://final-project-one-beta.vercel.app/">Visit Website</a>
 </div>
@@ -202,8 +202,9 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 ###### Viernes 24, Febrero 2023
 
-- [ ] Revisar el Responsive y pulir algunas cosas
-- [ ] Revidar y limpiar código
+- [x] Revisar el Responsive y pulir algunas cosas
+- [x] Revidar y limpiar código
+- [ ] Terminar el Readme
 - [ ] Preparar presentación
 - [ ] Presentación del proyecto
 
