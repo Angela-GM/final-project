@@ -220,7 +220,7 @@ Presentation Link: [Insert here your presentation link](insert-link-here)
 
 <!-- ACKNOWLEDGMENTS -->
 
-## agradecimientos
+## Agradecimientos
 
 Quiero dar las gracias a Aleix, Diego y Jarko, los 3 profesores que nos han ido guiando y ayudando para poder terminar el proyecto.
 
