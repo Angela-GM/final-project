@@ -70,23 +70,23 @@ Tener un archivo README.md bien estructurado y bien documentado también puede s
 
 <img src="/src/icons/screenshot01.png" alt="TaskTime screenshoot" width="100%" height="50%">
 
-La sección "sobre el proyecto" en un archivo README es una sección importante que proporciona información general sobre el objetivo y la funcionalidad del proyecto.
+Bienvenidos al proyecto final del bootcamp Frontend Developer que he cursado en Ironhack. Este proyecto consiste en una aplicación web de tareas sencilla creada con Vue.js 3 que permite a los usuarios crear cuentas, registrar tareas, editarlas y marcarlas como completadas. Todos los datos de los usuarios y las tareas se almacenan en una base de datos de Supabase y se han creado estilos propios para la maquetación CSS.
 
-En esta sección se puede incluir información como:
+La aplicación se ha desplegado a través del servicio que ofrece Vercel para que los usuarios puedan acceder a ella con facilidad. Además, se ha utilizado Pinia de Vue para implementar el manejo de estado y asegurar un funcionamiento óptimo.
 
-- Una descripción breve del proyecto y su propósito
-- Tecnologías utilizadas
-- Funcionalidades principales
-- Instrucciones de instalación y configuración
-- Enlaces a documentación adicional o recursos relacionados con el proyecto
-- Licencia del proyecto
-- Contribuciones de las personas en el proyecto.
-
-En resumen, la sección "sobre el proyecto" es una excelente manera de brindar a los usuarios y contribuidores una visión general del proyecto y proporcionarles toda la información necesaria para comenzar a trabajar con él.
+El propósito de este proyecto es consolidar los conocimientos ya adquiridos durante el curso, así como continuar aprendiendo durante el desarrollo del proyecto. Espero que disfruten usando la aplicación tanto como disfruté creándola!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Construido Con
+
+- [Vue.js 3] (https://vuejs.org/)
+- HTML5
+- CSS3
+- JavaScript ES6
+- [Vercel](https://vercel.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Git](https://git-scm.com/)
 
 La sección "construido con" en un archivo README es una sección que proporciona información sobre las tecnologías y herramientas utilizadas para desarrollar el proyecto.
 
