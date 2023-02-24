@@ -66,8 +66,8 @@ const completeTaskSupabase = async (taskObject) => {
 
 //funcion para editar tarea conectandose con supabse
 const editTaskSupabase = async (editTaskObject) => {
-  console.log("click");
-  console.log(editTaskObject);
+  // console.log("click");
+  // console.log(editTaskObject);
   await taskStore.editTaskSupabase(
     editTaskObject.title,
     editTaskObject.id,

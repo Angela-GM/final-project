@@ -146,7 +146,7 @@ const inputContainer = ref(false);
 const currentTaskTitle = ref("");
 const currentTaskDescription = ref("");
 const showInput = () => {
-  console.log("click");
+  // console.log("click");
   inputContainer.value = !inputContainer.value;
   currentTaskTitle.value = props.task.title;
   currentTaskDescription.value = props.task.description;

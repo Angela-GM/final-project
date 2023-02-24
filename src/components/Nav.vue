@@ -92,7 +92,7 @@ async function getProfile() {
 const redirect = useRouter();
 
 const signOut = async () => {
-  console.log("ha entrado en la funcion signOut");
+  // console.log("ha entrado en la funcion signOut");
   try {
     // call the user store and send the users info to backend to signOut
     await useUserStore().signOut();

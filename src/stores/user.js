@@ -29,7 +29,7 @@ export const useUserStore = defineStore("user", {
       if (error) throw error;
       if (user) {
         this.user = user;
-        console.log(this.user);
+        // console.log(this.user);
 
         await supabase.from("profiles").insert([
           {
@@ -72,7 +72,7 @@ export const useUserStore = defineStore("user", {
           .match({ user_id: this.user.id });
 
         if (profile) this.profile = profile[0];
-        console.log("profile in store: ", profile);
+        // console.log("profile in store: ", profile);
       }
     },
 
