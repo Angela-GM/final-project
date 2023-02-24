@@ -68,8 +68,7 @@ Tener un archivo README.md bien estructurado y bien documentado también puede s
 
 ## Acerca del Proyecto
 
-<!--
-<img src="./resources/images/readMe/screenshot.png" alt="Logo" width="100%" height="50%"> -->
+<img src="/src/icons/screenshot01.png" alt="TaskTime screenshoot" width="100%" height="50%">
 
 La sección "sobre el proyecto" en un archivo README es una sección importante que proporciona información general sobre el objetivo y la funcionalidad del proyecto.
 
